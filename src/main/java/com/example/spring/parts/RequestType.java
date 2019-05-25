@@ -19,11 +19,22 @@ public abstract class RequestType extends ParameterBase {
 	@JsonProperty("key")
 	public String key;
 
+	public Long start = 0L;
+	public Long count = 0L;
+
 	public MultiValueMap<String, String> convert() {
 		MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
 
 		map.add("key", getKey());
 		map.add("format", "json");
+
+		if (start == 0) {
+			add(map, "start", start);
+		}
+
+		if (count == 0) {
+			add(map, "count", count);
+		}
 
 		return map;
 	}
