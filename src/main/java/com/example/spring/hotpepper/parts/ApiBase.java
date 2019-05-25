@@ -17,6 +17,9 @@ import org.springframework.web.util.UriComponentsBuilder;
 import com.example.spring.config.RecruitApiConfig;
 import com.example.spring.hotpepper.parts.ResponseType.Results;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 public abstract class ApiBase<I extends RequestType, O extends ResponseType<?>> {
 
@@ -38,9 +41,12 @@ public abstract class ApiBase<I extends RequestType, O extends ResponseType<?>> 
 
 		if (method() == HttpMethod.GET) {
 			URI uri = UriComponentsBuilder.fromUri(uri()).queryParams(request.convert()).build().toUri();
+			log.info("uri       = {}", uri);
 			entry = new RequestEntity<>(method(), uri);
 		} else {
 			URI uri = uri();
+			log.info("uri       = {}", uri);
+			log.info("parameter = {}", request.convert());
 			entry = new RequestEntity<>(request.convert(), new HttpHeaders(), method(), uri);
 		}
 

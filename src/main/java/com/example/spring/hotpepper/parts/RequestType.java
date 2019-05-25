@@ -40,4 +40,16 @@ public abstract class RequestType extends ParameterBase {
 		}
 	}
 
+	public void add(MultiValueMap<String, String> map, String name, Enum<?> text) {
+		if (text != null) {
+			map.add(name, text.toString());
+		}
+	}
+
+	public void add(MultiValueMap<String, String> map, String name, Number text) {
+		if (text != null) {
+			map.add(name, text.toString());
+		}
+	}
+
 }

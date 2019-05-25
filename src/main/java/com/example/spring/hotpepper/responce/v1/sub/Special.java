@@ -6,6 +6,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @SuppressWarnings("serial")
 public class Special extends MasterBase {
 
+	@JsonProperty("title")
+	String title;
+
 	@JsonProperty("special_category")
 	SpecialCategory specialCategory;
 
