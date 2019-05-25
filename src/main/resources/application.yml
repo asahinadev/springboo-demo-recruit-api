@@ -1,7 +1,8 @@
 server:
   port: 9002
+
 logging:  level:
-    com.example: DEBUG    org.springframework.web.client.RestTemplate: DEBUG
+    com.example: INFO    org.springframework.web.client.RestTemplate: INFO
 
 recruit-api:
   key: e46b9d43c2e3544f
