@@ -28,11 +28,11 @@ public abstract class RequestType extends ParameterBase {
 		map.add("key", getKey());
 		map.add("format", "json");
 
-		if (start == 0) {
+		if (start > 0) {
 			add(map, "start", start);
 		}
 
-		if (count == 0) {
+		if (count > 0) {
 			add(map, "count", count);
 		}
 
