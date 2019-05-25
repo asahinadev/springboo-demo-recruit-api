@@ -1,4 +1,4 @@
-package com.example.spring.hotpepper.parts;
+package com.example.spring.parts;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

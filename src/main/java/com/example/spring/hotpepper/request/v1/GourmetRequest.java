@@ -10,13 +10,13 @@ import javax.validation.constraints.Size;
 
 import org.springframework.util.MultiValueMap;
 
-import com.example.spring.hotpepper.parts.RequestType;
 import com.example.spring.hotpepper.values.Coupon;
 import com.example.spring.hotpepper.values.Datum;
 import com.example.spring.hotpepper.values.Flag;
 import com.example.spring.hotpepper.values.Order;
 import com.example.spring.hotpepper.values.Range;
 import com.example.spring.hotpepper.values.ResponseType;
+import com.example.spring.parts.RequestType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;

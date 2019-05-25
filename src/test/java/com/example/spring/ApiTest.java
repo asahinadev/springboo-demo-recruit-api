@@ -12,9 +12,9 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.config.RecruitApiConfig;
-import com.example.spring.hotpepper.parts.ApiBase;
-import com.example.spring.hotpepper.parts.RequestType;
-import com.example.spring.hotpepper.parts.ResponseType;
+import com.example.spring.parts.ApiBase;
+import com.example.spring.parts.RequestType;
+import com.example.spring.parts.ResponseType;
 
 public abstract class ApiTest<
 // @formatter:off

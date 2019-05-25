@@ -2,7 +2,7 @@ package com.example.spring.hotpepper.request.v1;
 
 import org.springframework.util.MultiValueMap;
 
-import com.example.spring.hotpepper.parts.RequestType;
+import com.example.spring.parts.RequestType;
 
 import lombok.Getter;
 import lombok.Setter;

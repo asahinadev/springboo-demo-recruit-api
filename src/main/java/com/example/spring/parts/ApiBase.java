@@ -1,4 +1,4 @@
-package com.example.spring.hotpepper.parts;
+package com.example.spring.parts;
 
 import java.net.URI;
 import java.util.Arrays;
@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.example.spring.config.RecruitApiConfig;
-import com.example.spring.hotpepper.parts.ResponseType.Results;
+import com.example.spring.parts.ResponseType.Results;
 
 import lombok.extern.slf4j.Slf4j;
 

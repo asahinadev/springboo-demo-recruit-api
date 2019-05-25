@@ -4,9 +4,9 @@ import java.net.URI;
 
 import org.springframework.stereotype.Service;
 
-import com.example.spring.hotpepper.parts.ApiBase;
 import com.example.spring.hotpepper.request.v1.SpecialCategoryRequest;
 import com.example.spring.hotpepper.responce.v1.SpecialCategoryResponse;
+import com.example.spring.parts.ApiBase;
 
 @Service
 public class SpecialCategory

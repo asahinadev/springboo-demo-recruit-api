@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.util.MultiValueMap;
 
-import com.example.spring.hotpepper.parts.RequestType;
+import com.example.spring.parts.RequestType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;

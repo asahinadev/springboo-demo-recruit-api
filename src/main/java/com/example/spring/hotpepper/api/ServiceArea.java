@@ -4,9 +4,9 @@ import java.net.URI;
 
 import org.springframework.stereotype.Service;
 
-import com.example.spring.hotpepper.parts.ApiBase;
 import com.example.spring.hotpepper.request.v1.ServiceAreaRequest;
 import com.example.spring.hotpepper.responce.v1.ServiceAreaResponse;
+import com.example.spring.parts.ApiBase;
 
 @Service
 public class ServiceArea
