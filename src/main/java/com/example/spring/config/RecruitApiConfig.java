@@ -18,6 +18,8 @@ public class RecruitApiConfig {
 
 	Hotpepper hotpepper;
 
+	Manabi manabi;
+
 	@Data
 	public static class Hotpepper {
 		URI gourmet;
@@ -32,6 +34,27 @@ public class RecruitApiConfig {
 		URI creditCard;
 		URI special;
 		URI specialCategory;
+	}
+
+	@Data
+	public static class Manabi {
+		URI schoolKyoten;
+		URI event;
+		URI kouza;
+		URI tsushin;
+		URI tokucho;
+		URI area;
+		URI prefecture;
+		URI city;
+		URI along;
+		URI station;
+		URI category;
+		URI capsule;
+		URI subCapsule;
+		URI tokushu;
+		URI genre;
+		URI shikakuType;
+		URI capsuleType;
 	}
 
 }
