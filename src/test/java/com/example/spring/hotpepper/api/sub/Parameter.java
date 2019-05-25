@@ -17,15 +17,40 @@ public class Parameter {
 	public List<String> c1;
 	public List<String> c2;
 	public List<String> c3;
+	public List<String> c4;
 	public String k;
 	public String key;
 	public Object value;
 
-	public Parameter(List<String> c1, List<String> c2, List<String> c3, String k1) {
+	public Parameter(int i, List<String> c1) {
+		this();
+		if (i == 1) {
+			setC1(c1);
+		} else if (i == 2) {
+			setC2(c2);
+		} else if (i == 3) {
+			setC3(c1);
+		} else if (i == 4) {
+			setC4(c1);
+		} else {
+			throw new IllegalArgumentException("index");
+		}
+	}
+
+	public Parameter(List<String> c1, List<String> c2, List<String> c3, List<String> c4, String k1) {
 		this.setC1(c1);
 		this.setC2(c2);
 		this.setC3(c3);
+		this.setC4(c4);
 		this.setK(k1);
+	}
+
+	public Parameter(List<String> c1, List<String> c2, List<String> c3, List<String> c4) {
+		this(c1, c2, c3, c4, "");
+	}
+
+	public Parameter(List<String> c1, List<String> c2, List<String> c3, String k1) {
+		this(c1, c2, c3, emptyList(), k1);
 	}
 
 	public Parameter(List<String> c1, List<String> c2, List<String> c3) {
