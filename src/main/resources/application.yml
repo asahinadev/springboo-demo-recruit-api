@@ -1,0 +1,22 @@
+server:
+  port: 9002
+logging:  level:
+    com.example: DEBUG    org.springframework.web.client.RestTemplate: DEBUG
+
+recruit-api:
+  key: e46b9d43c2e3544f
+  hotpepper:
+    gourmet: "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/"
+    shop: "http://webservice.recruit.co.jp/hotpepper/shop/v1/"
+    large-service-area: "http://webservice.recruit.co.jp/hotpepper/large_service_area/v1/"
+    budget: "http://webservice.recruit.co.jp/hotpepper/budget/v1/"
+    service-area: "http://webservice.recruit.co.jp/hotpepper/service_area/v1/"
+    large-area: "http://webservice.recruit.co.jp/hotpepper/large_area/v1/"
+    middle-area: "http://webservice.recruit.co.jp/hotpepper/middle_area/v1/"
+    small-area: "http://webservice.recruit.co.jp/hotpepper/small_area/v1/"
+    genre: "http://webservice.recruit.co.jp/hotpepper/genre/v1/"
+    credit-card: "http://webservice.recruit.co.jp/hotpepper/credit_card/v1/"
+    special: "http://webservice.recruit.co.jp/hotpepper/special/v1/"
+    special-category: "http://webservice.recruit.co.jp/hotpepper/special_category/v1/"
+              
+      
