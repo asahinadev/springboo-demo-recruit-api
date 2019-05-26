@@ -29,7 +29,6 @@ public class AlongTest
 				new Parameter(1, $("1084", "1084")),
 				new Parameter(2, $("13101", "13102")),
 				new Parameter(3, $("13", "1")),
-				new Parameter(4, $("N1", "N2")),
 				new Parameter("along_type", Arrays.asList(AlongType.JR), ""),
 				new Parameter("東海道線"),
 				new Parameter());
@@ -57,10 +56,11 @@ public class AlongTest
 		request.setAlongs(parameter.c1);
 		request.setCities(parameter.c2);
 		request.setPrefectures(parameter.c3);
-		request.setAreas(parameter.c4);
+
 		if (Objects.equals(parameter.k, "青森")) {
 			request.setMapDisp(MapDisp.ANY);
 		}
+
 		request.setKeyword(parameter.k);
 	}
 }

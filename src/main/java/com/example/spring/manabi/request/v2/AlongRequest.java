@@ -29,9 +29,6 @@ public class AlongRequest extends RequestType {
 	@JsonProperty("prefecture")
 	List<String> prefectures;
 
-	@JsonProperty("area")
-	List<String> areas;
-
 	@JsonProperty("keyword")
 	String keyword;
 
@@ -47,7 +44,6 @@ public class AlongRequest extends RequestType {
 		});
 		add(map, "city", cities);
 		add(map, "prefecture", prefectures);
-		add(map, "area", areas);
 		add(map, "keyword", keyword);
 		add(map, "map_disp", mapDisp);
 
