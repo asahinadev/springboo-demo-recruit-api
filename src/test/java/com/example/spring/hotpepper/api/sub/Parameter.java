@@ -18,31 +18,54 @@ public class Parameter {
 	public List<String> c2;
 	public List<String> c3;
 	public List<String> c4;
+	public List<String> c5;
 	public String k;
 	public String key;
 	public Object value;
 
 	public Parameter(int i, List<String> c1) {
 		this();
-		if (i == 1) {
+		switch (i) {
+		case 1:
 			setC1(c1);
-		} else if (i == 2) {
-			setC2(c2);
-		} else if (i == 3) {
+			break;
+
+		case 2:
+			setC2(c1);
+			break;
+
+		case 3:
 			setC3(c1);
-		} else if (i == 4) {
+			break;
+
+		case 4:
 			setC4(c1);
-		} else {
+			break;
+
+		case 5:
+			setC5(c1);
+			break;
+
+		default:
 			throw new IllegalArgumentException("index");
 		}
 	}
 
-	public Parameter(List<String> c1, List<String> c2, List<String> c3, List<String> c4, String k1) {
+	public Parameter(List<String> c1, List<String> c2, List<String> c3, List<String> c4, List<String> c5, String k1) {
 		this.setC1(c1);
 		this.setC2(c2);
 		this.setC3(c3);
 		this.setC4(c4);
+		this.setC5(c5);
 		this.setK(k1);
+	}
+
+	public Parameter(List<String> c1, List<String> c2, List<String> c3, List<String> c4, List<String> c5) {
+		this(c1, c2, c3, c4, c5, "");
+	}
+
+	public Parameter(List<String> c1, List<String> c2, List<String> c3, List<String> c4, String k1) {
+		this(c1, c2, c3, c4, emptyList(), k1);
 	}
 
 	public Parameter(List<String> c1, List<String> c2, List<String> c3, List<String> c4) {
