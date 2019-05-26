@@ -7,6 +7,11 @@ import com.example.spring.parts.ParameterBase;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 @SuppressWarnings("serial")
 public class Shop extends ParameterBase {
 
@@ -117,4 +122,5 @@ public class Shop extends ParameterBase {
 
 	@JsonAnySetter
 	Map<String, String> any;
+
 }

@@ -81,6 +81,10 @@ public class Parameter {
 		this("");
 	}
 
+	public Parameter(String key, Object value) {
+		this(key, value, "");
+	}
+
 	public Parameter(String key, Object value, String keyword) {
 		this(keyword);
 		this.key = key;

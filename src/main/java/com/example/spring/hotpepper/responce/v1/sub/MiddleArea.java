@@ -19,4 +19,5 @@ public class MiddleArea extends MasterBase {
 
 	@JsonProperty("large_service_area")
 	LargeServiceArea largeServiceArea;
+
 }

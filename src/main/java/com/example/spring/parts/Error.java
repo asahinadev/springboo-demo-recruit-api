@@ -1,5 +1,10 @@
 package com.example.spring.parts;
 
+import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,7 +13,12 @@ import lombok.Setter;
 @SuppressWarnings("serial")
 public class Error extends ParameterBase {
 
+	@JsonProperty("code")
 	Integer code;
 
+	@JsonProperty("message")
 	String message;
+
+	@JsonAnySetter
+	Map<String, Object> any;
 }

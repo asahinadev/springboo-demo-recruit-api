@@ -19,7 +19,7 @@ public class SubCapsuleResponse extends ResponseType<SubCapsuleResponse.Results>
 	public static class Results extends ResponseType.Results {
 
 		@JsonProperty("sub_capsule")
-		List<SubCapsule> capsules;
+		List<SubCapsule> subCapsules;
 
 	}
 }

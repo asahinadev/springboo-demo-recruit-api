@@ -23,8 +23,8 @@ public class CategoryTest
 	@Parameterized.Parameters
 	public static List<Parameter> data() {
 		return Arrays.asList(
-				new Parameter($("G010001", "G010002")),
-				new Parameter(null, $("J000001", "J000002")),
+				new Parameter(1, $("G010001", "G010002")),
+				new Parameter(2, $("J000001", "J000002")),
 				new Parameter());
 	}
 

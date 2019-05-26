@@ -1,6 +1,9 @@
 package com.example.spring.parts;
 
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.LinkedMultiValueMap;
@@ -42,6 +45,20 @@ public abstract class RequestType extends ParameterBase {
 	public void add(MultiValueMap<String, String> map, String name, List<String> list) {
 		if (list != null && !list.isEmpty()) {
 			map.addAll(name, list);
+		}
+	}
+
+	public <E> void add(MultiValueMap<String, String> map, String name, List<E> list, Function<E, String> mapper) {
+		if (list != null && !list.isEmpty()) {
+			map.addAll(name, list.stream().map(mapper).collect(Collectors.toList()));
+		}
+	}
+
+	public <E> void add(
+			MultiValueMap<String, String> map, String name, List<E> list, Function<E, String> mapper,
+			Predicate<E> predicate) {
+		if (list != null && !list.isEmpty()) {
+			map.addAll(name, list.stream().filter(predicate).map(mapper).collect(Collectors.toList()));
 		}
 	}
 

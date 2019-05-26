@@ -23,8 +23,14 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 public abstract class ApiBase<I extends RequestType, O extends ResponseType<?>> {
 
-	protected RestTemplate restTemplate = new RestTemplate(
-			Arrays.asList(new JsonHttpMessageConverter()));
+	protected RestTemplate restTemplate;
+
+	public ApiBase() {
+		restTemplate = new RestTemplate(
+				Arrays.asList(new JsonHttpMessageConverter()));
+		restTemplate.setInterceptors(Arrays.asList(
+				new LoggingClientHttpRequestInterceptor()));
+	}
 
 	@Autowired
 	protected RecruitApiConfig config;
@@ -40,7 +46,7 @@ public abstract class ApiBase<I extends RequestType, O extends ResponseType<?>> 
 				MediaType.APPLICATION_JSON_UTF8));
 
 		if (method() == HttpMethod.GET) {
-			URI uri = UriComponentsBuilder.fromUri(uri()).queryParams(request.convert()).build().toUri();
+			URI uri = UriComponentsBuilder.fromUri(uri()).queryParams(request.convert()).encode().build().toUri();
 			log.info("uri       = {}", uri);
 			entry = new RequestEntity<>(method(), uri);
 		} else {

@@ -23,9 +23,9 @@ public class SmallAreaTest
 	@Parameterized.Parameters
 	public static List<Parameter> data() {
 		return Arrays.asList(
-				new Parameter($("Z011", "Z011")), // L
-				new Parameter(null, $("Y004", "Y005")), // M
-				new Parameter(null, null, $("X004", "X005")), // S
+				new Parameter(1, $("Z011", "Z011")), // L
+				new Parameter(2, $("Y004", "Y005")), // M
+				new Parameter(3, $("X004", "X005")), // S
 				new Parameter("月島"), // K
 				new Parameter());
 	}

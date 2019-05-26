@@ -23,8 +23,8 @@ public class MiddleAreaTest
 	@Parameterized.Parameters
 	public static List<Parameter> data() {
 		return Arrays.asList(
-				new Parameter($("Z011", "Z011")), // L
-				new Parameter(null, $("Y004", "Y005")), // M
+				new Parameter(1, $("Z011", "Z011")), // L
+				new Parameter(2, $("Y004", "Y005")), // M
 				new Parameter("月島"), // K
 				new Parameter());
 	}

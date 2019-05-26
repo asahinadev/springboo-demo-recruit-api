@@ -23,8 +23,8 @@ public class SpecialTest
 	@Parameterized.Parameters
 	public static List<Parameter> data() {
 		return Arrays.asList(
-				new Parameter($("SPA9", "SPC0")),
-				new Parameter(null, $("LT0080", "LT0087")),
+				new Parameter(1, $("SPA9", "SPC0")),
+				new Parameter(2, $("LT0080", "LT0087")),
 				new Parameter());
 	}
 

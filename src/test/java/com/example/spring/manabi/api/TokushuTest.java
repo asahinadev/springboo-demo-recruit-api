@@ -25,8 +25,8 @@ public class TokushuTest
 	@Parameterized.Parameters
 	public static List<Parameter> data() {
 		return Arrays.asList(
-				new Parameter($("T700001", "T700002")),
-				new Parameter(null, $("GG11", "GG12")),
+				new Parameter(1, $("T700001", "T700002")),
+				new Parameter(2, $("GG11", "GG12")),
 				new Parameter("1"),
 				new Parameter());
 	}

@@ -6,12 +6,22 @@ import java.util.List;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 class JsonHttpMessageConverter extends AbstractJackson2HttpMessageConverter {
 
+	private static ObjectMapper mapper() {
+		ObjectMapper om = new ObjectMapper();
+
+		om.setSerializationInclusion(Include.NON_NULL);
+		om.setSerializationInclusion(Include.NON_EMPTY);
+
+		return om;
+	}
+
 	public JsonHttpMessageConverter() {
-		super(new ObjectMapper());
+		super(mapper());
 	}
 
 	@Override

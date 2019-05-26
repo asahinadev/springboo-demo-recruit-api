@@ -23,9 +23,9 @@ public class CapsuleTest
 	@Parameterized.Parameters
 	public static List<Parameter> data() {
 		return Arrays.asList(
-				new Parameter($("G020001", "G020002")),
-				new Parameter(null, $("G010001", "G010002")),
-				new Parameter(null, null, $("J000001", "J000002")),
+				new Parameter(1, $("G020001", "G020002")),
+				new Parameter(2, $("G010001", "G010002")),
+				new Parameter(3, $("J000001", "J000002")),
 				new Parameter());
 	}
 
