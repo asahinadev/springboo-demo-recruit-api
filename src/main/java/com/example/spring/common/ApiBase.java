@@ -64,8 +64,8 @@ public abstract class ApiBase<I extends RequestType, O extends ResponseType<?>> 
 		O response = responseEntity.getBody();
 		Results results = response.getResults();
 
-		if (results != null && results.getError() != null) {
-			throw new IllegalStateException(results.getError().getMessage());
+		if (results != null && results.getError() != null && !results.getError().isEmpty()) {
+			throw new IllegalStateException(results.getError().get(0).getMessage());
 		}
 
 		return response;

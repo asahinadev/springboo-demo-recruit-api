@@ -1,6 +1,8 @@
 package com.example.spring.common;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -10,9 +12,12 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.SneakyThrows;
 
 @Getter
 @Setter
@@ -25,16 +30,44 @@ public abstract class RequestType extends ParameterBase {
 	public Long start = 0L;
 	public Long count = 0L;
 
-	public MultiValueMap<String, String> convert() {
+	@SuppressWarnings("unchecked")
+	@SneakyThrows
+	public final MultiValueMap<String, String> convert() {
 		MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
+
+		ObjectMapper om = new ObjectMapper();
+
+		String json = om.writeValueAsString(this);
+		Map<String, Object> obj = om.readValue(json, new TypeReference<Map<String, Object>>() {
+		});
+
+		for (Map.Entry<String, Object> entry : obj.entrySet()) {
+			String key = entry.getKey();
+			Object val = entry.getValue();
+
+			switch (key) {
+			case "key":
+			case "start":
+			case "count":
+				continue;
+
+			default:
+				if (val instanceof Collection) {
+					map.addAll(key, ((Collection<? extends Object>) val)
+							.stream().map(String::valueOf).collect(Collectors.toList()));
+				} else if (val != null) {
+					map.add(key, val.toString());
+				}
+				break;
+			}
+
+		}
 
 		map.add("key", getKey());
 		map.add("format", "json");
-
 		if (start > 0) {
 			add(map, "start", start);
 		}
-
 		if (count > 0) {
 			add(map, "count", count);
 		}
