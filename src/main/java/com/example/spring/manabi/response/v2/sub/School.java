@@ -1,5 +1,7 @@
 package com.example.spring.manabi.response.v2.sub;
 
+import java.util.List;
+
 import com.example.spring.common.MasterBase;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -9,11 +11,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @SuppressWarnings("serial")
-public class TokuchoGroup extends MasterBase {
+public class School extends MasterBase {
 
-	@JsonProperty("tokucho_comment")
-	String tokuchoComment;
+	@JsonProperty("name_kana")
+	String kana;
 
-	@JsonProperty("tokucho_list")
-	TokuchoList tokuchoList;
+	@JsonProperty("kyoten")
+	List<Kyoten> kyotens;
+
 }

@@ -1,6 +1,5 @@
 package com.example.spring.manabi.response.v2.sub;
 
-import com.example.spring.common.MasterBase;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;
@@ -9,11 +8,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @SuppressWarnings("serial")
-public class TokuchoGroup extends MasterBase {
+public class Kaiko extends Datetime {
 
-	@JsonProperty("tokucho_comment")
-	String tokuchoComment;
+	@JsonProperty("wday")
+	String wday;
 
-	@JsonProperty("tokucho_list")
-	TokuchoList tokuchoList;
 }

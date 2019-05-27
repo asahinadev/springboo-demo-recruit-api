@@ -15,8 +15,28 @@ public class Capsule extends MasterBase {
 	Category category;
 
 	@JsonProperty("capsule_type")
-	String capsuleType;
+	CapsuleType capsuleType;
 
 	@JsonProperty("shikaku_type")
-	String shikakuType;
+	ShikakuType shikakuType;
+
+	public void setShikakuType(String code) {
+		ShikakuType c = new ShikakuType();
+		c.setCode(code);
+		this.setShikakuType(c);
+	}
+
+	public void setShikakuType(ShikakuType shikakuType) {
+		this.shikakuType = shikakuType;
+	}
+
+	public void setCapsuleType(String code) {
+		CapsuleType c = new CapsuleType();
+		c.setCode(code);
+		this.setCapsuleType(c);
+	}
+
+	public void setCapsuleType(CapsuleType capsuleType) {
+		this.capsuleType = capsuleType;
+	}
 }
