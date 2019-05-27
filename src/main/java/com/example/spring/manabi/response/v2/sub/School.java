@@ -1,7 +1,5 @@
 package com.example.spring.manabi.response.v2.sub;
 
-import java.util.List;
-
 import com.example.spring.common.MasterBase;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -17,6 +15,6 @@ public class School extends MasterBase {
 	String kana;
 
 	@JsonProperty("kyoten")
-	List<Kyoten> kyotens;
+	Kyoten kyoten;
 
 }

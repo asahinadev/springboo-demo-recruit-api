@@ -53,7 +53,7 @@ public class Kyoten extends MasterBase {
 	Urls urls;
 
 	@JsonProperty("tokushu_list")
-	TokuchoList tokuchoList;
+	TokushuList tokushuList;
 
 	@JsonProperty("tokucho_group_list")
 	TokuchoGroupList tokuchoGroupList;
@@ -81,5 +81,20 @@ public class Kyoten extends MasterBase {
 
 	@JsonProperty("kouza_list")
 	KouzaList kouzaList;
+
+	@JsonProperty("access")
+	String access;
+
+	@JsonProperty("official_url")
+	String officialUrl;
+
+	@JsonProperty("zip")
+	String zip;
+
+	@JsonProperty("address")
+	String address;
+
+	@JsonProperty("tel")
+	String tel;
 
 }

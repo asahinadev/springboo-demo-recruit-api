@@ -2,6 +2,7 @@ package com.example.spring.manabi.response.v2.sub;
 
 import com.example.spring.common.MasterBase;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,7 +13,8 @@ import lombok.Setter;
 public class SubCapsule extends MasterBase {
 
 	@JsonProperty("shikaku_type")
-	String shikakuType;
+	@JsonDeserialize(using = ShikakuType.Deserializer.class)
+	ShikakuType shikakuType;
 
 	@JsonProperty("capsule")
 	Capsule capsule;

@@ -1,10 +1,10 @@
 package com.example.spring.manabi.response.v2.sub;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import com.example.spring.common.MasterBase;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,21 +18,8 @@ public class Kouza extends MasterBase {
 	Double jukoPrice;
 
 	@JsonProperty("photo")
+	@JsonDeserialize(using = Urls.Deserializer.class)
 	Urls photo;
-
-	public void setPhoto(String url) {
-		Map<String, String> map = new HashMap<>();
-		map.put("large", url);
-		map.put("small", url);
-
-		Urls photo = new Urls();
-		photo.setUrls(map);
-		this.setPhoto(photo);
-	}
-
-	public void setPhoto(Urls photo) {
-		this.photo = photo;
-	}
 
 	@JsonProperty("kaisu")
 	String kaisu;
@@ -56,7 +43,19 @@ public class Kouza extends MasterBase {
 	String read;
 
 	@JsonProperty("spec")
-	Map<String, Object> spec;//	capsule_list: {},
+	Map<String, Object> spec;
+
+	@JsonProperty("capsule_list")
+	CapsuleList capsuleList;
+
+	@JsonProperty("shiryo_url")
+	Urls shiryoUrl;
+
+	@JsonProperty("photo_kyouzai")
+	Urls photoKyouzai;
+
+	@JsonProperty("photo_main")
+	Urls photoMain;
 
 	@JsonProperty("url")
 	Urls url;
@@ -67,9 +66,19 @@ public class Kouza extends MasterBase {
 	@JsonProperty("tokucho_group_list")
 	TokuchoGroupList tokuchoGroupList;
 
+	@JsonProperty("tokushu_list")
+	TokushuList tokushuList;
+
 	@JsonProperty("school")
 	School school;
 
-	//	kaiko_list: { },
+	@JsonProperty("kaiko_list")
+	KaikoList kaikoList;
+
+	@JsonProperty("profile")
+	Profile profile;
+
+	@JsonProperty("curriculum")
+	String curriculum;
 
 }

@@ -2,6 +2,7 @@ package com.example.spring.manabi.response.v2.sub;
 
 import com.example.spring.common.MasterBase;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -19,4 +20,11 @@ public class Tokushu extends MasterBase {
 
 	@JsonProperty("sort")
 	Integer sort;
+
+	@JsonProperty("tokucho")
+	@JsonDeserialize(using = Tokucho.Deserializer.class)
+	Tokucho tokucho;
+
+	@JsonProperty("catch")
+	String catchCopy;
 }

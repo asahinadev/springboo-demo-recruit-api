@@ -10,21 +10,24 @@ import lombok.Setter;
 @Getter
 @Setter
 @SuppressWarnings("serial")
-public class Point extends ParameterBase {
+public class Profile extends ParameterBase {
 
 	@JsonProperty("photo")
 	@JsonDeserialize(using = Urls.Deserializer.class)
 	Urls photo;
 
-	@JsonProperty("read")
-	String read;
-
-	@JsonProperty("caption")
-	String caption;
-
 	@JsonProperty("title")
 	String title;
 
-	@JsonProperty("catch")
-	String catchCopy;
+	@JsonProperty("read")
+	String read;
+
+	@JsonProperty("graduates")
+	String graduates;
+
+	@JsonProperty("comment")
+	String comment;
+
+	@JsonProperty("point")
+	Point point;
 }
