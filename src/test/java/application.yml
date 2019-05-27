@@ -1,7 +1,8 @@
 server:
   port: 9002
 
-logging:  level:
+logging:
+  pattern:    console: "[%-5p] %m%n"  level:
     root: WARN
     com.example.spring.common.LoggingClientHttpRequestInterceptor: INFO
 #    com.example: INFO#    org.springframework.web.client.RestTemplate: DEBUG
@@ -21,18 +22,22 @@ recruit-api:
     credit-card: "http://webservice.recruit.co.jp/hotpepper/credit_card/v1/"
     special: "http://webservice.recruit.co.jp/hotpepper/special/v1/"
     special-category: "http://webservice.recruit.co.jp/hotpepper/special_category/v1/"
-        manabi:    school-kyoten: "http://webservice.recruit.co.jp/manabi/school_kyoten/v2"
+      
+  manabi:
+    school-kyoten: "http://webservice.recruit.co.jp/manabi/school_kyoten/v2"
     event: "http://webservice.recruit.co.jp/manabi/event/v2"
     kouza: "http://webservice.recruit.co.jp/manabi/kouza/v2"
     tsushin: "http://webservice.recruit.co.jp/manabi/tsushin/v2"
     tokucho: "http://webservice.recruit.co.jp/manabi/tokucho/v2"
     area: "http://webservice.recruit.co.jp/manabi/area/v2"
     prefecture: "http://webservice.recruit.co.jp/manabi/prefecture/v2"
-    city: "http://webservice.recruit.co.jp/manabi/city/v2"    along: "http://webservice.recruit.co.jp/manabi/along/v2"
+    city: "http://webservice.recruit.co.jp/manabi/city/v2"
+    along: "http://webservice.recruit.co.jp/manabi/along/v2"
     station: "http://webservice.recruit.co.jp/manabi/station/v2"
     category: "http://webservice.recruit.co.jp/manabi/category/v2"
     capsule: "http://webservice.recruit.co.jp/manabi/capsule/v2"
     sub-capsule: "http://webservice.recruit.co.jp/manabi/sub_capsule/v2"
     tokushu: "http://webservice.recruit.co.jp/manabi/tokushu/v2"
     genre: "http://webservice.recruit.co.jp/manabi/genre/v2"
-    shikaku-type: "http://webservice.recruit.co.jp/manabi/shikaku_type/v2"    capsule-type: "http://webservice.recruit.co.jp/manabi/capsule_type/v2"
+    shikaku-type: "http://webservice.recruit.co.jp/manabi/shikaku_type/v2"
+    capsule-type: "http://webservice.recruit.co.jp/manabi/capsule_type/v2"
