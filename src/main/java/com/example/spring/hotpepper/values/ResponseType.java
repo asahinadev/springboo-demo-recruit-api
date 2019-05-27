@@ -2,6 +2,7 @@ package com.example.spring.hotpepper.values;
 
 import java.util.Objects;
 
+import com.example.spring.util.EnumUtil;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;

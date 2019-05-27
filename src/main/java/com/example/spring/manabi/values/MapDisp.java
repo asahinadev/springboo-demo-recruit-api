@@ -1,8 +1,8 @@
 package com.example.spring.manabi.values;
 
-import java.util.Arrays;
 import java.util.Objects;
 
+import com.example.spring.util.EnumUtil;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -29,10 +29,6 @@ public enum MapDisp {
 
 	@JsonCreator
 	public static MapDisp fromValue(String id) {
-		return Arrays.asList(values())
-				.stream()
-				.filter(v -> Objects.equals(v.toString(), id))
-				.findFirst()
-				.orElse(ANY);
+		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), ANY);
 	}
 }

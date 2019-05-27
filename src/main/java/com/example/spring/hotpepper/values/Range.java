@@ -1,8 +1,8 @@
 package com.example.spring.hotpepper.values;
 
-import java.util.Arrays;
 import java.util.Objects;
 
+import com.example.spring.util.EnumUtil;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -32,11 +32,7 @@ public enum Range {
 
 	@JsonCreator
 	public static Range fromValue(String id) {
-		return Arrays.asList(values())
-				.stream()
-				.filter(v -> Objects.equals(v.getId(), id))
-				.findFirst()
-				.orElse(RANGE_3);
+		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), RANGE_3);
 	}
 
 }
