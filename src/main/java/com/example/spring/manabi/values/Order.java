@@ -1,4 +1,4 @@
-package com.example.spring.values;
+package com.example.spring.manabi.values;
 
 import java.util.Objects;
 
@@ -12,24 +12,25 @@ import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public enum Flag {
-
-	YES("1", "絞り込み条件として設定する"),
-
+public enum Order {
 	@JsonEnumDefaultValue
-	ANY("0", "絞り込み条件として設定しない");
+	ORDER_1("0", "おすすめ順"),
 
+	ORDER_2("1", " 距離順"),
+
+	;
 	final String id;
 	final String label;
 
 	@Override
 	@JsonValue
 	public String toString() {
-		return getId();
+		return getId().toString();
 	}
 
 	@JsonCreator
-	public static Flag fromValue(String id) {
-		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), ANY);
+	public static Order fromValue(String id) {
+		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), ORDER_1);
 	}
+
 }

@@ -5,7 +5,7 @@ import java.util.Objects;
 import com.example.spring.util.EnumUtil;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -29,7 +29,7 @@ public enum ResponseType {
 	final String label;
 
 	@Override
-	@JsonDeserialize
+	@JsonValue
 	public String toString() {
 		return getId();
 	}

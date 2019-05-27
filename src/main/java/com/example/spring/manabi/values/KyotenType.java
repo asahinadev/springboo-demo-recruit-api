@@ -1,4 +1,4 @@
-package com.example.spring.values;
+package com.example.spring.manabi.values;
 
 import java.util.Objects;
 
@@ -11,13 +11,14 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @Getter
-@RequiredArgsConstructor
-public enum Flag {
 
-	YES("1", "絞り込み条件として設定する"),
+@RequiredArgsConstructor
+public enum KyotenType {
 
 	@JsonEnumDefaultValue
-	ANY("0", "絞り込み条件として設定しない");
+	TG("TG", "通学"),
+
+	TK("TK", "通信");
 
 	final String id;
 	final String label;
@@ -29,7 +30,7 @@ public enum Flag {
 	}
 
 	@JsonCreator
-	public static Flag fromValue(String id) {
-		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), ANY);
+	public static KyotenType fromValue(String id) {
+		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), TG);
 	}
 }
