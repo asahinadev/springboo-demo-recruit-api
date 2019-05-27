@@ -1,4 +1,4 @@
-package com.example.spring.parts;
+package com.example.spring.common;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

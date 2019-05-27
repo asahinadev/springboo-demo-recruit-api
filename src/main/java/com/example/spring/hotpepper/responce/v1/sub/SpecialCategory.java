@@ -1,6 +1,6 @@
 package com.example.spring.hotpepper.responce.v1.sub;
 
-import com.example.spring.parts.MasterBase;
+import com.example.spring.common.MasterBase;
 
 import lombok.Getter;
 import lombok.Setter;

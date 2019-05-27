@@ -3,7 +3,7 @@ package com.example.spring.hotpepper.responce.v1.sub;
 import java.util.List;
 import java.util.Map;
 
-import com.example.spring.parts.ParameterBase;
+import com.example.spring.common.ParameterBase;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,4 +1,4 @@
-package com.example.spring.parts;
+package com.example.spring.common;
 
 import java.util.List;
 import java.util.function.Function;

@@ -11,10 +11,10 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.example.spring.common.ApiBase;
+import com.example.spring.common.RequestType;
+import com.example.spring.common.ResponseType;
 import com.example.spring.config.RecruitApiConfig;
-import com.example.spring.parts.ApiBase;
-import com.example.spring.parts.RequestType;
-import com.example.spring.parts.ResponseType;
 
 public abstract class ApiTest<
 // @formatter:off

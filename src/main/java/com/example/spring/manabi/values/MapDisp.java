@@ -15,8 +15,9 @@ import lombok.RequiredArgsConstructor;
 public enum MapDisp {
 
 	@JsonEnumDefaultValue
-	DISP("1", "対象"),
-	ANY("0", "対象外");
+	YES("1", "対象"),
+
+	NO("0", "対象外");
 
 	final String id;
 	final String label;
@@ -29,6 +30,6 @@ public enum MapDisp {
 
 	@JsonCreator
 	public static MapDisp fromValue(String id) {
-		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), ANY);
+		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), NO);
 	}
 }

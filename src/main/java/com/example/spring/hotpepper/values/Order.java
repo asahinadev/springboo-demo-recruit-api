@@ -14,10 +14,13 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum Order {
 	@JsonEnumDefaultValue
-	NAME("1", "店名"),
-	GENRE("2", " ジャンルM"),
-	AREA_CODE("3", "エリア"),
-	RECOMMEND("4", "おすすめ"),
+	ORDER_1("1", "店名"),
+
+	ORDER_2("2", " ジャンルM"),
+
+	ORDER_3("3", "エリア"),
+
+	ORDER_4("4", "おすすめ"),
 
 	;
 	final String id;
@@ -31,7 +34,7 @@ public enum Order {
 
 	@JsonCreator
 	public static Order fromValue(String id) {
-		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), NAME);
+		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), ORDER_1);
 	}
 
 }

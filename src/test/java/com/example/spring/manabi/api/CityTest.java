@@ -56,7 +56,7 @@ public class CityTest
 		request.setPrefectures(parameter.c2);
 		request.setAreas(parameter.c3);
 		if (Objects.equals(parameter.k, "青森")) {
-			request.setMapDisp(MapDisp.ANY);
+			request.setMapDisp(MapDisp.NO);
 		}
 		request.setKeyword(parameter.k);
 	}

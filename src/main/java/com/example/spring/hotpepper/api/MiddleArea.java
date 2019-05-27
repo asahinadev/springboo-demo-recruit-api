@@ -4,9 +4,9 @@ import java.net.URI;
 
 import org.springframework.stereotype.Service;
 
+import com.example.spring.common.ApiBase;
 import com.example.spring.hotpepper.request.v1.MiddleAreaRequest;
 import com.example.spring.hotpepper.responce.v1.MiddleAreaResponse;
-import com.example.spring.parts.ApiBase;
 
 @Service
 public class MiddleArea

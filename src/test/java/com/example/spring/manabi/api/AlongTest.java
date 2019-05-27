@@ -2,7 +2,6 @@ package com.example.spring.manabi.api;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 import org.junit.runners.Parameterized;
 import org.slf4j.Logger;
@@ -13,7 +12,6 @@ import com.example.spring.hotpepper.api.sub.Parameter;
 import com.example.spring.manabi.request.v2.AlongRequest;
 import com.example.spring.manabi.response.v2.AlongResponse;
 import com.example.spring.manabi.values.AlongType;
-import com.example.spring.manabi.values.MapDisp;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -56,11 +54,6 @@ public class AlongTest
 		request.setAlongs(parameter.c1);
 		request.setCities(parameter.c2);
 		request.setPrefectures(parameter.c3);
-
-		if (Objects.equals(parameter.k, "青森")) {
-			request.setMapDisp(MapDisp.ANY);
-		}
-
 		request.setKeyword(parameter.k);
 	}
 }

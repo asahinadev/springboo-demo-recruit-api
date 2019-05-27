@@ -1,4 +1,4 @@
-package com.example.spring.manabi.values;
+package com.example.spring.values;
 
 import java.util.Objects;
 
@@ -12,10 +12,14 @@ import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public enum Flag {
-	Y("1", "有"),
+public enum Coupon {
+
+	YES("0", "有"),
+
+	NO("1", "無"),
+
 	@JsonEnumDefaultValue
-	A("0", "すべて");
+	ANY("", "どちらでも");
 
 	final String id;
 	final String label;
@@ -27,7 +31,7 @@ public enum Flag {
 	}
 
 	@JsonCreator
-	public static Flag fromValue(String id) {
-		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), A);
+	public static Coupon fromValue(String id) {
+		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), ANY);
 	}
 }

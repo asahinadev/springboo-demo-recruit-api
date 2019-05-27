@@ -1,6 +1,6 @@
 package com.example.spring.manabi.response.v2.sub;
 
-import com.example.spring.parts.MasterBase;
+import com.example.spring.common.MasterBase;
 
 import lombok.Getter;
 import lombok.Setter;

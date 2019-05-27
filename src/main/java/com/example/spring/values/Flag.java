@@ -1,4 +1,4 @@
-package com.example.spring.hotpepper.values;
+package com.example.spring.values;
 
 import java.util.Objects;
 
@@ -13,9 +13,11 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public enum Flag {
-	Y("1", "有"),
+
+	YES("1", "絞り込み条件として設定する"),
+
 	@JsonEnumDefaultValue
-	A("0", "どちらでも");
+	ANY("0", "絞り込み条件として設定しない");
 
 	final String id;
 	final String label;
@@ -28,6 +30,6 @@ public enum Flag {
 
 	@JsonCreator
 	public static Flag fromValue(String id) {
-		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), A);
+		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), ANY);
 	}
 }

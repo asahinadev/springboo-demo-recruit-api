@@ -4,9 +4,8 @@ import java.util.List;
 
 import org.springframework.util.MultiValueMap;
 
+import com.example.spring.common.RequestType;
 import com.example.spring.manabi.values.AlongType;
-import com.example.spring.manabi.values.MapDisp;
-import com.example.spring.parts.RequestType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;
@@ -32,9 +31,6 @@ public class AlongRequest extends RequestType {
 	@JsonProperty("keyword")
 	String keyword;
 
-	@JsonProperty("map_disp")
-	MapDisp mapDisp = MapDisp.DISP;
-
 	public MultiValueMap<String, String> convert() {
 		MultiValueMap<String, String> map = super.convert();
 
@@ -45,7 +41,6 @@ public class AlongRequest extends RequestType {
 		add(map, "city", cities);
 		add(map, "prefecture", prefectures);
 		add(map, "keyword", keyword);
-		add(map, "map_disp", mapDisp);
 
 		return map;
 	}

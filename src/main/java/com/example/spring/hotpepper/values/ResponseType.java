@@ -13,12 +13,17 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public enum ResponseType {
-	DEFAULT("", "標準"),
-	LITE("lite", "軽量"),
-	CREDIT_CARD("credit_card", "クレジットカード情報を付与"),
-	SPECIAL("special", "特集情報を付与"),
+
+	RESPONCE_D("", "標準"),
+
+	RESPONCE_L("lite", "軽量"),
+
+	RESPONCE_C("credit_card", "クレジットカード情報を付与"),
+
+	RESPONCE_S("special", "特集情報を付与"),
+
 	@JsonEnumDefaultValue
-	ALL("credit_card+special", "全て");
+	RESPONCE_A("credit_card+special", "全て");
 
 	final String id;
 	final String label;
@@ -31,6 +36,6 @@ public enum ResponseType {
 
 	@JsonCreator
 	public static ResponseType fromValue(String id) {
-		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), DEFAULT);
+		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), RESPONCE_A);
 	}
 }

@@ -16,8 +16,11 @@ public enum AlongType {
 
 	@JsonEnumDefaultValue
 	OTHER("00010", "私鉄"),
+
 	JR("00020", "JR"),
+
 	SUBWAY("00030", "地下鉄"),
+
 	NONE("", "未指定");
 
 	final String id;

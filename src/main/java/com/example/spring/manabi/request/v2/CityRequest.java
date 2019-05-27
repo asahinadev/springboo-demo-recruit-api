@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.util.MultiValueMap;
 
+import com.example.spring.common.RequestType;
 import com.example.spring.manabi.values.MapDisp;
-import com.example.spring.parts.RequestType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;
@@ -29,7 +29,7 @@ public class CityRequest extends RequestType {
 	String keyword;
 
 	@JsonProperty("map_disp")
-	MapDisp mapDisp = MapDisp.DISP;
+	MapDisp mapDisp = MapDisp.YES;
 
 	public MultiValueMap<String, String> convert() {
 		MultiValueMap<String, String> map = super.convert();

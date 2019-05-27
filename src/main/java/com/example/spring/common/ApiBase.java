@@ -1,4 +1,4 @@
-package com.example.spring.parts;
+package com.example.spring.common;
 
 import java.net.URI;
 import java.util.Arrays;
@@ -14,8 +14,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import com.example.spring.common.ResponseType.Results;
 import com.example.spring.config.RecruitApiConfig;
-import com.example.spring.parts.ResponseType.Results;
 
 import lombok.extern.slf4j.Slf4j;
 

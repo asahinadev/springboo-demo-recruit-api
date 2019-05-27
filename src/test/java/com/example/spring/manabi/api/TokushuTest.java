@@ -12,7 +12,7 @@ import com.example.spring.ApiTest;
 import com.example.spring.hotpepper.api.sub.Parameter;
 import com.example.spring.manabi.request.v2.TokushuRequest;
 import com.example.spring.manabi.response.v2.TokushuResponse;
-import com.example.spring.manabi.values.Flag;
+import com.example.spring.values.Flag;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -53,7 +53,7 @@ public class TokushuTest
 		request.setTokushus(parameter.c1);
 		request.setKikakus(parameter.c2);
 		if (Objects.equals(parameter.k, "1")) {
-			request.setEvent(Flag.Y);
+			request.setEvent(Flag.YES);
 		}
 	}
 }

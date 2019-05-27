@@ -10,13 +10,13 @@ import javax.validation.constraints.Size;
 
 import org.springframework.util.MultiValueMap;
 
-import com.example.spring.hotpepper.values.Coupon;
+import com.example.spring.common.RequestType;
 import com.example.spring.hotpepper.values.Datum;
-import com.example.spring.hotpepper.values.Flag;
 import com.example.spring.hotpepper.values.Order;
 import com.example.spring.hotpepper.values.Range;
 import com.example.spring.hotpepper.values.ResponseType;
-import com.example.spring.parts.RequestType;
+import com.example.spring.values.Coupon;
+import com.example.spring.values.Flag;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;
@@ -98,7 +98,7 @@ public class GourmetRequest extends RequestType {
 	Datum datum = Datum.TOKYO;
 
 	@JsonProperty("ktai_coupon")
-	Coupon ktaiCoupon = Coupon.A;
+	Coupon ktaiCoupon = Coupon.ANY;
 
 	@JsonProperty("genre")
 	List<String> genre;
@@ -113,109 +113,109 @@ public class GourmetRequest extends RequestType {
 	Integer partyCapacity;
 
 	@JsonProperty("wifi")
-	Flag wifi = Flag.A;
+	Flag wifi = Flag.ANY;
 
 	@JsonProperty("wedding")
-	Flag wedding = Flag.A;
+	Flag wedding = Flag.ANY;
 
 	@JsonProperty("course")
-	Flag course = Flag.A;
+	Flag course = Flag.ANY;
 
 	@JsonProperty("free_drink")
-	Flag freeDrink = Flag.A;
+	Flag freeDrink = Flag.ANY;
 
 	@JsonProperty("free_food")
-	Flag freeFood = Flag.A;
+	Flag freeFood = Flag.ANY;
 
 	@JsonProperty("private_room")
-	Flag privateRoom = Flag.A;
+	Flag privateRoom = Flag.ANY;
 
 	@JsonProperty("horigotatsu")
-	Flag horigotatsu = Flag.A;
+	Flag horigotatsu = Flag.ANY;
 
 	@JsonProperty("tatami")
-	Flag tatami = Flag.A;
+	Flag tatami = Flag.ANY;
 
 	@JsonProperty("cocktail")
-	Flag cocktail = Flag.A;
+	Flag cocktail = Flag.ANY;
 
 	@JsonProperty("shochu")
-	Flag shochu = Flag.A;
+	Flag shochu = Flag.ANY;
 
 	@JsonProperty("sake")
-	Flag sake = Flag.A;
+	Flag sake = Flag.ANY;
 
 	@JsonProperty("wine")
-	Flag wine = Flag.A;
+	Flag wine = Flag.ANY;
 
 	@JsonProperty("card")
-	Flag card = Flag.A;
+	Flag card = Flag.ANY;
 
 	@JsonProperty("non_smoking")
-	Flag nonSmoking = Flag.A;
+	Flag nonSmoking = Flag.ANY;
 
 	@JsonProperty("charter")
-	Flag charter = Flag.A;
+	Flag charter = Flag.ANY;
 
 	@JsonProperty("ktai")
-	Flag ktai = Flag.A;
+	Flag ktai = Flag.ANY;
 
 	@JsonProperty("parking")
-	Flag parking = Flag.A;
+	Flag parking = Flag.ANY;
 
 	@JsonProperty("barrier_free")
-	Flag barrierFree = Flag.A;
+	Flag barrierFree = Flag.ANY;
 
 	@JsonProperty("sommelier")
-	Flag sommelier = Flag.A;
+	Flag sommelier = Flag.ANY;
 
 	@JsonProperty("night_view")
-	Flag nightView = Flag.A;
+	Flag nightView = Flag.ANY;
 
 	@JsonProperty("open_air")
-	Flag open_air = Flag.A;
+	Flag open_air = Flag.ANY;
 
 	@JsonProperty("show")
-	Flag show = Flag.A;
+	Flag show = Flag.ANY;
 
 	@JsonProperty("equipment")
-	Flag equipment = Flag.A;
+	Flag equipment = Flag.ANY;
 
 	@JsonProperty("karaoke")
-	Flag karaoke = Flag.A;
+	Flag karaoke = Flag.ANY;
 
 	@JsonProperty("band")
-	Flag band = Flag.A;
+	Flag band = Flag.ANY;
 
 	@JsonProperty("tv")
-	Flag tv = Flag.A;
+	Flag tv = Flag.ANY;
 
 	@JsonProperty("lunch")
-	Flag lunch = Flag.A;
+	Flag lunch = Flag.ANY;
 
 	@JsonProperty("midnight")
-	Flag midnight = Flag.A;
+	Flag midnight = Flag.ANY;
 
 	@JsonProperty("midnight_meal")
-	Flag midnightMeal = Flag.A;
+	Flag midnightMeal = Flag.ANY;
 
 	@JsonProperty("english")
-	Flag english = Flag.A;
+	Flag english = Flag.ANY;
 
 	@JsonProperty("pet")
-	Flag pet = Flag.A;
+	Flag pet = Flag.ANY;
 
 	@JsonProperty("child")
-	Flag child = Flag.A;
+	Flag child = Flag.ANY;
 
 	@JsonProperty("credit_card")
 	List<String> creditCard;
 
 	@JsonProperty("type")
-	ResponseType type = ResponseType.ALL;
+	ResponseType type = ResponseType.RESPONCE_A;
 
 	@JsonProperty("order")
-	Order order = Order.NAME;
+	Order order = Order.ORDER_1;
 
 	public MultiValueMap<String, String> convert() {
 		MultiValueMap<String, String> map = super.convert();

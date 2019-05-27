@@ -1,7 +1,6 @@
 package com.example.spring.manabi.response.v2.sub;
 
-import com.example.spring.manabi.values.MapDisp;
-import com.example.spring.parts.MasterBase;
+import com.example.spring.common.MasterBase;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;
@@ -13,7 +12,7 @@ import lombok.Setter;
 public class City extends MasterBase {
 
 	@JsonProperty("map_disp")
-	MapDisp mapDisp = MapDisp.DISP;
+	String mapDisp;
 
 	@JsonProperty("prefecture")
 	Prefecture prefecture;

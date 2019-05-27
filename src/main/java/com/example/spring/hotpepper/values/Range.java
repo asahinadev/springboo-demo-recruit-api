@@ -13,11 +13,16 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public enum Range {
+
 	RANGE_1("1", " 300M"),
+
 	RANGE_2("2", " 500M"),
+
 	@JsonEnumDefaultValue
 	RANGE_3("3", "1000M"),
+
 	RANGE_4("4", "2000M"),
+
 	RANGE_5("5", "3000M"),
 
 	;
