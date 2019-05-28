@@ -24,6 +24,8 @@ public class AirlineTest
 
 		List<AirlineRequest> list = new ArrayList<>();
 		list.add(AirlineRequest.of().build());
+		list.add(AirlineRequest.of().keyword($("ベトナム")).build());
+		list.add(AirlineRequest.of().airlines($("AO")).build());
 		return list;
 
 	}

@@ -22,5 +22,4 @@ public class AirlineResponse extends ResponseType<AirlineResponse.Results> {
 		List<Airline> airlines;
 
 	}
-
 }

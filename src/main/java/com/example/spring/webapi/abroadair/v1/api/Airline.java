@@ -21,4 +21,5 @@ public class Airline
 	protected URI uri() {
 		return config.getAbroadair().getAirline();
 	}
+
 }

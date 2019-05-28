@@ -1,7 +1,11 @@
 package com.example.spring.webapi.abroadair.v1.request;
 
-import com.example.spring.common.RequestType;
+import java.util.List;
 
+import com.example.spring.common.RequestType;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,8 +15,13 @@ import lombok.Setter;
 @Setter
 @Builder(builderMethodName = "of")
 @NoArgsConstructor
-//@AllArgsConstructor
+@AllArgsConstructor
 @SuppressWarnings("serial")
 public class AirlineRequest extends RequestType {
+
+	@JsonProperty("airline")
+	List<String> airlines;
+	@JsonProperty("keyword")
+	List<String> keyword;
 
 }
