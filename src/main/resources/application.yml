@@ -38,4 +38,7 @@ recruit-api:
     shikaku-type: "http://webservice.recruit.co.jp/manabi/shikaku_type/v2"    capsule-type: "http://webservice.recruit.co.jp/manabi/capsule_type/v2"
     
   carcensor:
-    usedcar: "http://webservice.recruit.co.jp/carsensor/usedcar/v1/"    catalog: "http://webservice.recruit.co.jp/carsensor/catalog/v1/"    brand:   "http://webservice.recruit.co.jp/carsensor/brand/v1/"    country: "http://webservice.recruit.co.jp/carsensor/country/v1/"    large-area: "http://webservice.recruit.co.jp/carsensor/large_area/v1/"    prefecture: "http://webservice.recruit.co.jp/carsensor/pref/v1/"     
+    usedcar: "http://webservice.recruit.co.jp/carsensor/usedcar/v1/"    catalog: "http://webservice.recruit.co.jp/carsensor/catalog/v1/"    brand:   "http://webservice.recruit.co.jp/carsensor/brand/v1/"    country: "http://webservice.recruit.co.jp/carsensor/country/v1/"    large-area: "http://webservice.recruit.co.jp/carsensor/large_area/v1/"    prefecture: "http://webservice.recruit.co.jp/carsensor/pref/v1/"
+    color: "http://webservice.recruit.co.jp/carsensor/color/v1/"
+    body: "http://webservice.recruit.co.jp/carsensor/body/v1/"      
+     

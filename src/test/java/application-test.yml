@@ -1,0 +1,5 @@
+logging:
+  pattern:    console: "[%-5p] %m%n"  level:
+    root: WARN
+    com.example.spring.common.LoggingClientHttpRequestInterceptor: INFO
+
