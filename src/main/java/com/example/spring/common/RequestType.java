@@ -54,9 +54,13 @@ public abstract class RequestType extends ParameterBase {
 			default:
 				if (val instanceof Collection) {
 					map.addAll(key, ((Collection<? extends Object>) val)
-							.stream().map(String::valueOf).collect(Collectors.toList()));
+							.stream().map(String::valueOf)
+							.filter(StringUtils::isNotEmpty)
+							.collect(Collectors.toList()));
 				} else if (val != null) {
-					map.add(key, val.toString());
+					if (StringUtils.isNotEmpty(val.toString())) {
+						map.add(key, val.toString());
+					}
 				}
 				break;
 			}
