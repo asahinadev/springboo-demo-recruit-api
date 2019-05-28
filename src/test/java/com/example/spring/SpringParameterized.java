@@ -19,7 +19,7 @@ import org.springframework.test.context.junit4.rules.SpringMethodRule;
 public class SpringParameterized {
 
 	@ClassRule
-	public static final SpringClassRule RULE = new SpringClassRule();
+	public static final SpringClassRule CLASS_RULE = new SpringClassRule();
 
 	@Rule
 	public final SpringMethodRule rule = new SpringMethodRule();

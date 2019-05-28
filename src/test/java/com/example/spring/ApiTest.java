@@ -58,4 +58,8 @@ OUT  extends ResponseType<?>
 	protected static <E> List<E> $(final E... parameters) {
 		return Arrays.asList(parameters);
 	}
+
+	protected static List<String> $(String... strings) {
+		return Arrays.asList(strings);
+	}
 }

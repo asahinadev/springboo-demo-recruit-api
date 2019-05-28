@@ -19,9 +19,15 @@ public class Parameter {
 	public List<String> c3;
 	public List<String> c4;
 	public List<String> c5;
+
 	public String k;
 	public String key;
 	public Object value;
+	public List<String> otherList;
+
+	public Double lat;
+	public Double lng;
+	public String range;
 
 	public Parameter(int i, List<String> c1) {
 		this();
@@ -112,5 +118,20 @@ public class Parameter {
 		this(keyword);
 		this.key = key;
 		this.value = value;
+	}
+
+	public Parameter(String key, List<String> value) {
+		this.key = key;
+		this.otherList = value;
+	}
+
+	public Parameter(double lat, double lng, String range) {
+		this.lat = lat;
+		this.lng = lng;
+		this.range = range;
+	}
+
+	public <E extends Enum<E>> E range(Class<E> enumType) {
+		return (E) Enum.valueOf(enumType, range);
 	}
 }
