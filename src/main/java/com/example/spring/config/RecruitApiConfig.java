@@ -22,6 +22,8 @@ public class RecruitApiConfig {
 
 	Carcensor carcensor;
 
+	Abroadair abroadair;
+
 	@Data
 	public static class Hotpepper {
 		URI gourmet;
@@ -70,4 +72,17 @@ public class RecruitApiConfig {
 		URI color;
 		URI body;
 	}
+
+	@Data
+	public static class Abroadair {
+		URI ticket;
+		URI area;
+		URI zone;
+		URI country;
+		URI city;
+		URI deptDetail;
+		URI airline;
+		URI kodawari;
+	}
+
 }

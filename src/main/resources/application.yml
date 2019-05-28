@@ -40,5 +40,12 @@ recruit-api:
   carcensor:
     usedcar: "http://webservice.recruit.co.jp/carsensor/usedcar/v1/"    catalog: "http://webservice.recruit.co.jp/carsensor/catalog/v1/"    brand:   "http://webservice.recruit.co.jp/carsensor/brand/v1/"    country: "http://webservice.recruit.co.jp/carsensor/country/v1/"    large-area: "http://webservice.recruit.co.jp/carsensor/large_area/v1/"    prefecture: "http://webservice.recruit.co.jp/carsensor/pref/v1/"
     color: "http://webservice.recruit.co.jp/carsensor/color/v1/"
-    body: "http://webservice.recruit.co.jp/carsensor/body/v1/"      
-     
+    body: "http://webservice.recruit.co.jp/carsensor/body/v1/"  
+  abroadair:    ticket: "http://webservice.recruit.co.jp/ab-road-air/ticket/v1/"
+    area: "http://webservice.recruit.co.jp/ab-road-air/area/v1/"
+    zone: "http://webservice.recruit.co.jp/ab-road-air/zone/v1/"
+    country: "http://webservice.recruit.co.jp/ab-road-air/country/v1/"
+    city: "http://webservice.recruit.co.jp/ab-road-air/city/v1/"
+    dept-detail: "http://webservice.recruit.co.jp/ab-road-air/dept_detail/v1/"
+    airline: "http://webservice.recruit.co.jp/ab-road-air/airline/v1/"
+    kodawari: "http://webservice.recruit.co.jp/ab-road-air/kodaw/v1/"
