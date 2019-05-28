@@ -24,6 +24,12 @@ public class DeptDetailTest
 
 		List<DeptDetailRequest> list = new ArrayList<>();
 		list.add(DeptDetailRequest.of().build());
+
+		list.add(DeptDetailRequest.of().deptDetails($("NRT")).build());
+		list.add(DeptDetailRequest.of().depts($("TYO")).build());
+		list.add(DeptDetailRequest.of().inUse("0").build());
+		list.add(DeptDetailRequest.of().inUse("1").build());
+
 		return list;
 
 	}

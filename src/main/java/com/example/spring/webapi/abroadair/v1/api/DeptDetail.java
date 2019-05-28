@@ -21,4 +21,5 @@ public class DeptDetail
 	protected URI uri() {
 		return config.getAbroadair().getDeptDetail();
 	}
+
 }
