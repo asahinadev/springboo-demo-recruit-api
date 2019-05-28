@@ -8,6 +8,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @SuppressWarnings("serial")
-public class Kodaw extends MasterBase {
+public class Brand extends MasterBase {
 
 }

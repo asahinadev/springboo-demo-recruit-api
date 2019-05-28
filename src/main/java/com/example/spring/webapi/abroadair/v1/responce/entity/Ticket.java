@@ -44,11 +44,18 @@ public class Ticket extends MasterBase {
 	DeptTime deptTime;
 	@JsonProperty("trip_type")
 	TripType tripType;
-	@JsonProperty("kodaw")
-	Kodaw kodaw;
-	@JsonProperty("bland")
-	Bland bland;
+	@JsonProperty("kodawari")
+	List<Kodawari> kodawaris;
+	@JsonProperty("brand")
+	Brand brand;
 	@JsonProperty("urls")
 	Urls urls;
+	@JsonProperty("price")
+	Price price;
 
+	@Deprecated
+	@JsonProperty("kodaw")
+	public void setKodaw(List<Kodawari> kodawaris) {
+		this.setKodawaris(kodawaris);
+	}
 }

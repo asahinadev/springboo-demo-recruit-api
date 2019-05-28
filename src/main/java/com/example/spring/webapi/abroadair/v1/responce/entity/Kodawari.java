@@ -8,6 +8,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @SuppressWarnings("serial")
-public class Bland extends MasterBase {
+public class Kodawari extends MasterBase {
 
 }
