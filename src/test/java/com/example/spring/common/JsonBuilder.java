@@ -1,4 +1,4 @@
-package com.example.spring.hotpepper.api.sub;
+package com.example.spring.common;
 
 import java.util.ArrayList;
 import java.util.HashMap;

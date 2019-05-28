@@ -1,4 +1,4 @@
-package com.example.spring.hotpepper.api.sub;
+package com.example.spring.common;
 
 import static java.util.Collections.emptyList;
 

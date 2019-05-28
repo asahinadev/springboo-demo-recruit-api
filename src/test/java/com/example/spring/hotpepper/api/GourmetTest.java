@@ -8,7 +8,7 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.ApiTest;
-import com.example.spring.hotpepper.api.sub.JsonBuilder;
+import com.example.spring.common.JsonBuilder;
 import com.example.spring.hotpepper.request.v1.GourmetRequest;
 import com.example.spring.hotpepper.responce.v1.GourmetResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;

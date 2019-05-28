@@ -8,7 +8,7 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.ApiTest;
-import com.example.spring.hotpepper.api.sub.Parameter;
+import com.example.spring.common.Parameter;
 import com.example.spring.hotpepper.request.v1.GenreRequest;
 import com.example.spring.hotpepper.responce.v1.GenreResponse;
 
