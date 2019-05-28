@@ -9,15 +9,12 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.ApiTest;
+import com.example.spring.common.values.Order;
+import com.example.spring.common.values.Range;
 import com.example.spring.common.values.Wday;
 import com.example.spring.common.values.YesAny;
-import com.example.spring.webapi.manabi.v2.api.Tsugaku;
 import com.example.spring.webapi.manabi.v2.request.TsugakuRequest;
 import com.example.spring.webapi.manabi.v2.response.TsugakuResponse;
-import com.example.spring.webapi.manabi.v2.values.JukoPriceRange;
-import com.example.spring.webapi.manabi.v2.values.Order;
-import com.example.spring.webapi.manabi.v2.values.Range;
-import com.example.spring.webapi.manabi.v2.values.StartTimePeriod;
 import com.example.spring.webapi.manabi.v2.values.Term;
 
 import lombok.RequiredArgsConstructor;
@@ -80,12 +77,12 @@ public class TsugakuTest
 			list.add(TsugakuRequest.of().wday($(flag)).build());
 		}
 		//		start_time_period
-		for (StartTimePeriod flag : StartTimePeriod.values()) {
+		for (Range flag : Range.manabiStartTimeValues()) {
 			list.add(TsugakuRequest.of().startTimePeriods($(flag)).build());
 		}
 		//		juko_price_range
-		for (JukoPriceRange range : JukoPriceRange.values()) {
-			list.add(TsugakuRequest.of().jukoPriceRange(Arrays.asList(range)).build());
+		for (Range r : Range.manabiJukoPriceValues()) {
+			list.add(TsugakuRequest.of().jukoPriceRange(Arrays.asList(r)).build());
 		}
 		//		term
 		for (Term range : Term.values()) {
@@ -94,8 +91,8 @@ public class TsugakuTest
 		list.add(TsugakuRequest.of().tokuchos($("01001")).build());
 		//		lat/lng/range/order
 		// 品川
-		for (Range r : Range.values()) {
-			list.add(TsugakuRequest.of().lat(35.609167D).lng(139.730167D).range(r).order(Order.ORDER_2).build());
+		for (Range r : Range.manabiValues()) {
+			list.add(TsugakuRequest.of().lat(35.609167D).lng(139.730167D).range(r).order(Order.MANABI_ORDER_2).build());
 		}
 		//		tokucho 01001
 		//		keyword
@@ -107,7 +104,7 @@ public class TsugakuTest
 			list.add(TsugakuRequest.of().areas($("N2")).shiryo(flag).build());
 		}
 		//		order
-		list.add(TsugakuRequest.of().areas($("N2")).order(Order.ORDER_1).build());
+		list.add(TsugakuRequest.of().areas($("N2")).order(Order.MANABI_ORDER_1).build());
 
 		return list;
 	}

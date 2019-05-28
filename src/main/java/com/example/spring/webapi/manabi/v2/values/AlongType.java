@@ -15,11 +15,9 @@ import lombok.RequiredArgsConstructor;
 public enum AlongType {
 
 	@JsonEnumDefaultValue
-	OTHER("00010", "私鉄"),
-
+	OT("00010", "私鉄"),
 	JR("00020", "JR"),
-
-	SUBWAY("00030", "地下鉄");
+	SW("00030", "地下鉄");
 
 	final String id;
 	final String label;

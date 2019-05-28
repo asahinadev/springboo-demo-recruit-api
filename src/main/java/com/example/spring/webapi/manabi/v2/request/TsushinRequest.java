@@ -3,10 +3,9 @@ package com.example.spring.webapi.manabi.v2.request;
 import java.util.List;
 
 import com.example.spring.common.RequestType;
+import com.example.spring.common.values.Order;
+import com.example.spring.common.values.Range;
 import com.example.spring.common.values.YesAny;
-import com.example.spring.webapi.manabi.v2.values.JukoPriceRange;
-import com.example.spring.webapi.manabi.v2.values.Order;
-import com.example.spring.webapi.manabi.v2.values.Range;
 import com.example.spring.webapi.manabi.v2.values.Term;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -65,7 +64,7 @@ public class TsushinRequest extends RequestType {
 	@JsonProperty("range")
 	Range range;
 	@JsonProperty("juko_price_range")
-	List<JukoPriceRange> jukoPriceRange;
+	List<Range> jukoPriceRange;
 	@JsonProperty("term")
 	List<Term> term;
 	@JsonProperty("keyword")

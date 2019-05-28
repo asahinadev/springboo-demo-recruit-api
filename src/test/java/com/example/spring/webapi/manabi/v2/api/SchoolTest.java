@@ -8,14 +8,13 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.ApiTest;
+import com.example.spring.common.values.Order;
+import com.example.spring.common.values.Range;
 import com.example.spring.common.values.Wday;
 import com.example.spring.common.values.YesAny;
-import com.example.spring.webapi.manabi.v2.api.School;
 import com.example.spring.webapi.manabi.v2.request.SchoolRequest;
 import com.example.spring.webapi.manabi.v2.response.SchoolResponse;
 import com.example.spring.webapi.manabi.v2.values.KyotenType;
-import com.example.spring.webapi.manabi.v2.values.Order;
-import com.example.spring.webapi.manabi.v2.values.Range;
 
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
@@ -87,15 +86,15 @@ public class SchoolTest
 		list.add(SchoolRequest.of().tokuchos($("01001")).build());
 		//		lat/lng/range/order
 		// 品川
-		for (Range r : Range.values()) {
-			list.add(SchoolRequest.of().lat(35.609167D).lng(139.730167D).range(r).order(Order.ORDER_2).build());
+		for (Range r : Range.manabiValues()) {
+			list.add(SchoolRequest.of().lat(35.609167D).lng(139.730167D).range(r).order(Order.MANABI_ORDER_2).build());
 		}
 		//		keyword
 		list.add(SchoolRequest.of().areas($("N2")).keyword("ヒメジダイガク").build());
 		//		keyword_or
 		list.add(SchoolRequest.of().areas($("N2")).keywordOr($("ヒメジダイガク")).build());
 		//		order
-		list.add(SchoolRequest.of().areas($("N2")).order(Order.ORDER_1).build());
+		list.add(SchoolRequest.of().areas($("N2")).order(Order.MANABI_ORDER_1).build());
 
 		return list;
 	}

@@ -11,14 +11,12 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.ApiTest;
+import com.example.spring.common.values.Order;
+import com.example.spring.common.values.Range;
 import com.example.spring.common.values.Wday;
 import com.example.spring.common.values.YesAny;
-import com.example.spring.webapi.manabi.v2.api.Event;
 import com.example.spring.webapi.manabi.v2.request.EventRequest;
 import com.example.spring.webapi.manabi.v2.response.EventResponse;
-import com.example.spring.webapi.manabi.v2.values.JukoPriceRange;
-import com.example.spring.webapi.manabi.v2.values.Order;
-import com.example.spring.webapi.manabi.v2.values.Range;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -79,8 +77,8 @@ public class EventTest
 		list.add(EventRequest.of().tokuchos($("01001")).build());
 		//		lat/lng/range/order
 		// 品川
-		for (Range r : Range.values()) {
-			list.add(EventRequest.of().lat(35.609167D).lng(139.730167D).range(r).order(Order.ORDER_2).build());
+		for (Range r : Range.manabiValues()) {
+			list.add(EventRequest.of().lat(35.609167D).lng(139.730167D).range(r).order(Order.MANABI_ORDER_2).build());
 		}
 		//	start_time_from
 		list.add(EventRequest.of().areas($("N2")).startTimeFrom("1200").build());
@@ -98,7 +96,7 @@ public class EventTest
 				.dateTo(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"))).build());
 
 		//		juko_price_range
-		for (JukoPriceRange range : JukoPriceRange.values()) {
+		for (Range range : Range.manabiJukoPriceValues()) {
 			list.add(EventRequest.of().jukoPriceRange(Arrays.asList(range)).build());
 		}
 		//		keyword
@@ -109,7 +107,7 @@ public class EventTest
 		list.add(EventRequest.of().areas($("N2")).reserveType("01").build());
 		list.add(EventRequest.of().areas($("N2")).reserveType("02").build());
 		//	order
-		list.add(EventRequest.of().areas($("N2")).order(Order.ORDER_1).build());
+		list.add(EventRequest.of().areas($("N2")).order(Order.MANABI_ORDER_1).build());
 
 		return list;
 

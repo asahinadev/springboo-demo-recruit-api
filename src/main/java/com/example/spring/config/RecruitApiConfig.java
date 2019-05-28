@@ -20,6 +20,8 @@ public class RecruitApiConfig {
 
 	Manabi manabi;
 
+	Carcensor carcensor;
+
 	@Data
 	public static class Hotpepper {
 		URI gourmet;
@@ -57,4 +59,15 @@ public class RecruitApiConfig {
 		URI capsuleType;
 	}
 
+	@Data
+	public static class Carcensor {
+		URI usedcar;
+		URI catalog;
+		URI brand;
+		URI country;
+		URI largeArea;
+		URI prefecture;
+		URI color;
+		URI body;
+	}
 }

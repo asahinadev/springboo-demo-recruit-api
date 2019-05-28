@@ -9,13 +9,11 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.ApiTest;
+import com.example.spring.common.values.Order;
+import com.example.spring.common.values.Range;
 import com.example.spring.common.values.YesAny;
-import com.example.spring.webapi.manabi.v2.api.Tsushin;
 import com.example.spring.webapi.manabi.v2.request.TsushinRequest;
 import com.example.spring.webapi.manabi.v2.response.TsushinResponse;
-import com.example.spring.webapi.manabi.v2.values.JukoPriceRange;
-import com.example.spring.webapi.manabi.v2.values.Order;
-import com.example.spring.webapi.manabi.v2.values.Range;
 import com.example.spring.webapi.manabi.v2.values.Term;
 
 import lombok.RequiredArgsConstructor;
@@ -74,8 +72,8 @@ public class TsushinTest
 		//		zip 671-0101
 		list.add(TsushinRequest.of().zips($("6710101")).build());
 		//		juko_price_range
-		for (JukoPriceRange range : JukoPriceRange.values()) {
-			list.add(TsushinRequest.of().jukoPriceRange(Arrays.asList(range)).build());
+		for (Range r : Range.manabiJukoPriceValues()) {
+			list.add(TsushinRequest.of().jukoPriceRange(Arrays.asList(r)).build());
 		}
 		//		term
 		for (Term range : Term.values()) {
@@ -85,8 +83,8 @@ public class TsushinTest
 		list.add(TsushinRequest.of().tokuchos($("01001")).build());
 		//		lat/lng/range/order
 		// 品川
-		for (Range r : Range.values()) {
-			list.add(TsushinRequest.of().lat(35.609167D).lng(139.730167D).range(r).order(Order.ORDER_2).build());
+		for (Range r : Range.manabiValues()) {
+			list.add(TsushinRequest.of().lat(35.609167D).lng(139.730167D).range(r).order(Order.MANABI_ORDER_2).build());
 		}
 		//		keyword
 		list.add(TsushinRequest.of().areas($("N2")).keyword("ヒメジダイガク").build());
@@ -97,7 +95,7 @@ public class TsushinTest
 			list.add(TsushinRequest.of().areas($("N2")).shiryo(flag).build());
 		}
 		//		order
-		list.add(TsushinRequest.of().areas($("N2")).order(Order.ORDER_1).build());
+		list.add(TsushinRequest.of().areas($("N2")).order(Order.MANABI_ORDER_1).build());
 
 		return list;
 	}

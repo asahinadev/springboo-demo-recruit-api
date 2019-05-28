@@ -3,11 +3,11 @@ package com.example.spring.webapi.manabi.v2.request;
 import java.util.List;
 
 import com.example.spring.common.RequestType;
+import com.example.spring.common.values.Order;
+import com.example.spring.common.values.Range;
 import com.example.spring.common.values.Wday;
 import com.example.spring.common.values.YesAny;
 import com.example.spring.webapi.manabi.v2.values.KyotenType;
-import com.example.spring.webapi.manabi.v2.values.Order;
-import com.example.spring.webapi.manabi.v2.values.Range;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;

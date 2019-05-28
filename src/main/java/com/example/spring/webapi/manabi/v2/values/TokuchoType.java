@@ -15,9 +15,8 @@ import lombok.RequiredArgsConstructor;
 public enum TokuchoType {
 
 	@JsonEnumDefaultValue
-	KYOTEN("01", "拠点特徴"),
-
-	KOUZA("02", "講座特徴");
+	VALUE_01("01", "拠点特徴"),
+	VALUE_02("02", "講座特徴");
 
 	final String id;
 	final String label;
@@ -30,7 +29,7 @@ public enum TokuchoType {
 
 	@JsonCreator
 	public static TokuchoType fromValue(String id) {
-		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), KYOTEN);
+		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), VALUE_01);
 	}
 
 }

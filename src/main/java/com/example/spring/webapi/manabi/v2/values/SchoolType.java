@@ -15,11 +15,9 @@ import lombok.RequiredArgsConstructor;
 public enum SchoolType {
 
 	@JsonEnumDefaultValue
-	TSUGAKU("01", "通学専用"),
-
-	TSUSHIN("02", "通信専用"),
-
-	KENYOU("03", "通学通信兼用"),
+	VALUE_01("01", "通学専用"),
+	VALUE_02("02", "通信専用"),
+	VALUE_03("03", "通学通信兼用"),
 
 	;
 
@@ -34,7 +32,7 @@ public enum SchoolType {
 
 	@JsonCreator
 	public static SchoolType fromValue(String id) {
-		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), TSUGAKU);
+		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), VALUE_01);
 	}
 
 }
