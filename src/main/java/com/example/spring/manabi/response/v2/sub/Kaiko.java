@@ -13,4 +13,9 @@ public class Kaiko extends Datetime {
 	@JsonProperty("wday")
 	String wday;
 
+	@JsonProperty("start_time")
+	String startTime;
+
+	@JsonProperty("end_time")
+	String endTime;
 }
