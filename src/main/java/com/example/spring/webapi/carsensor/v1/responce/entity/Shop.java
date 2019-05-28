@@ -20,5 +20,7 @@ public class Shop extends MasterBase {
 	Double lng;
 	@JsonProperty("datum")
 	Datum datum;
+	@JsonProperty("pref")
+	Pref pref;
 
 }
