@@ -3,7 +3,7 @@ package com.example.spring.manabi.response.v2;
 import java.util.List;
 
 import com.example.spring.common.ResponseType;
-import com.example.spring.manabi.response.v2.sub.Tokushu;
+import com.example.spring.manabi.response.v2.entity.Tokushu;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;

@@ -3,7 +3,7 @@ package com.example.spring.hotpepper.responce.v1;
 import java.util.List;
 
 import com.example.spring.common.ResponseType;
-import com.example.spring.hotpepper.responce.v1.sub.Genre;
+import com.example.spring.hotpepper.responce.v1.entity.Genre;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;
