@@ -14,11 +14,13 @@ public class ServiceArea
 
 	@Override
 	protected Class<ServiceAreaResponse> type() {
+
 		return ServiceAreaResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getHotpepper().getServiceArea();
 	}
 }

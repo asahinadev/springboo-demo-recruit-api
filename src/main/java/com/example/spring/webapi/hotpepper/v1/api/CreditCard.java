@@ -14,11 +14,13 @@ public class CreditCard
 
 	@Override
 	protected Class<CreditCardResponse> type() {
+
 		return CreditCardResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getHotpepper().getCreditCard();
 	}
 }

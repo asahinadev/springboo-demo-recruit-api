@@ -21,6 +21,7 @@ public class LargeAreaRequest extends RequestType {
 
 	@JsonProperty("large_area")
 	List<String> largeAreas;
+
 	@JsonProperty("keyword")
 	String keyword;
 

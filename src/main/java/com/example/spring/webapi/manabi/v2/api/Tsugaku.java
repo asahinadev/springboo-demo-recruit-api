@@ -14,11 +14,13 @@ public class Tsugaku
 
 	@Override
 	protected Class<TsugakuResponse> type() {
+
 		return TsugakuResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getManabi().getKouza();
 	}
 }

@@ -21,10 +21,12 @@ public class ClientHttpResponseWrapper
 	final ClientHttpResponse response;
 
 	public HttpHeaders getHeaders() {
+
 		return response.getHeaders();
 	}
 
 	public InputStream getBody() throws IOException {
+
 		if (body == null) {
 			this.body = StreamUtils.copyToByteArray(this.response.getBody());
 		}
@@ -33,23 +35,28 @@ public class ClientHttpResponseWrapper
 
 	@SneakyThrows
 	public String getBodyText() {
+
 		getBody();
 		return new String(body);
 	}
 
 	public HttpStatus getStatusCode() throws IOException {
+
 		return response.getStatusCode();
 	}
 
 	public int getRawStatusCode() throws IOException {
+
 		return response.getRawStatusCode();
 	}
 
 	public String getStatusText() throws IOException {
+
 		return response.getStatusText();
 	}
 
 	public void close() {
+
 		response.close();
 	}
 

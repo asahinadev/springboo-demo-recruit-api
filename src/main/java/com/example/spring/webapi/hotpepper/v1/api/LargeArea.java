@@ -14,11 +14,13 @@ public class LargeArea
 
 	@Override
 	protected Class<LargeAreaResponse> type() {
+
 		return LargeAreaResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getHotpepper().getLargeArea();
 	}
 }

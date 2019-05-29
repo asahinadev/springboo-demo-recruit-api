@@ -22,8 +22,10 @@ public class TokuchoRequest extends RequestType {
 
 	@JsonProperty("tokucho_type")
 	TokuchoType tokuchoType;
+
 	@JsonProperty("tktg_type")
 	SchoolType tktgType;
+
 	@JsonProperty("pickup")
 	YesAny pickup;
 

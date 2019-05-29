@@ -25,6 +25,7 @@ public class CapsuleType extends MasterBase {
 		@Override
 		public CapsuleType deserialize(JsonParser p, DeserializationContext ctxt)
 				throws IOException, JsonProcessingException {
+
 			TreeNode node = p.getCodec().readTree(p);
 			if (node.isValueNode()) {
 				CapsuleType result = new CapsuleType();

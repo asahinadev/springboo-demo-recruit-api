@@ -14,11 +14,13 @@ public class Special
 
 	@Override
 	protected Class<SpecialResponse> type() {
+
 		return SpecialResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getHotpepper().getSpecial();
 	}
 }

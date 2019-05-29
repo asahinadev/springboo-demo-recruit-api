@@ -21,14 +21,19 @@ public class StationRequest extends RequestType {
 
 	@JsonProperty("station")
 	List<String> stations;
+
 	@JsonProperty("facility")
 	List<String> facilities;
+
 	@JsonProperty("along")
 	List<String> alongs;
+
 	@JsonProperty("city")
 	List<String> cities;
+
 	@JsonProperty("prefecture")
 	List<String> prefectures;
+
 	@JsonProperty("keyword")
 	String keyword;
 

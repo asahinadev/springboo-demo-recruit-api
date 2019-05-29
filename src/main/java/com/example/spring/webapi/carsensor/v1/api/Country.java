@@ -14,11 +14,13 @@ public class Country
 
 	@Override
 	protected Class<CountryResponse> type() {
+
 		return CountryResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getCarcensor().getCountry();
 	}
 }

@@ -14,11 +14,13 @@ public class Catalog
 
 	@Override
 	protected Class<CatalogResponse> type() {
+
 		return CatalogResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getCarcensor().getCatalog();
 	}
 }

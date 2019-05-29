@@ -14,11 +14,13 @@ public class Airline
 
 	@Override
 	protected Class<AirlineResponse> type() {
+
 		return AirlineResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getAbroadair().getAirline();
 	}
 

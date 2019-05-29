@@ -14,11 +14,13 @@ public class Ticket
 
 	@Override
 	protected Class<TicketResponse> type() {
+
 		return TicketResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getAbroadair().getTicket();
 	}
 }

@@ -21,6 +21,7 @@ public class PrefRequest extends RequestType {
 
 	@JsonProperty("code")
 	List<String> codes;
+
 	@JsonProperty("large_area")
 	List<String> largeAreas;
 

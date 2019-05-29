@@ -14,11 +14,13 @@ public class Tokushu
 
 	@Override
 	protected Class<TokushuResponse> type() {
+
 		return TokushuResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getManabi().getTokushu();
 	}
 }

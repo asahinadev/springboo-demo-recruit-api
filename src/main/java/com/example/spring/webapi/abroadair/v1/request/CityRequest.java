@@ -22,18 +22,25 @@ public class CityRequest extends RequestType {
 
 	@JsonProperty("area")
 	List<String> areas;
+
 	@JsonProperty("country")
 	List<String> countries;
+
 	@JsonProperty("city")
 	List<String> cities;
+
 	@JsonProperty("tour_city")
 	List<String> tourCities;
+
 	@JsonProperty("zone")
 	List<String> zones;
+
 	@JsonProperty("keyword")
 	List<String> keyword;
+
 	@JsonProperty("in_use")
 	String inUse;
+
 	@JsonProperty("order")
 	Order order;
 

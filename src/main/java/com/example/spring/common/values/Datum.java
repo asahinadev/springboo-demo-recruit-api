@@ -17,11 +17,13 @@ public enum Datum {
 	@Override
 	@JsonValue
 	public String toString() {
+
 		return name().toLowerCase();
 	}
 
 	@JsonCreator
 	public static Datum fromValue(String name) {
+
 		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), name), TOKYO);
 	}
 }

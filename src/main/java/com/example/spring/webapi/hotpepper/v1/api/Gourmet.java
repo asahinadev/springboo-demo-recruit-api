@@ -14,11 +14,13 @@ public class Gourmet
 
 	@Override
 	protected Class<GourmetResponse> type() {
+
 		return GourmetResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getHotpepper().getGourmet();
 	}
 }

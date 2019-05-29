@@ -14,11 +14,13 @@ public class Area
 
 	@Override
 	protected Class<AreaResponse> type() {
+
 		return AreaResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getAbroadair().getArea();
 	}
 }

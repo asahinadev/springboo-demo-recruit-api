@@ -13,30 +13,43 @@ public class Catalog extends MasterBase {
 
 	@JsonProperty("brand")
 	Brand brand;
+
 	@JsonProperty("model")
 	String model;
+
 	@JsonProperty("grade")
 	String grade;
+
 	@JsonProperty("price")
 	String price;
+
 	@JsonProperty("desc")
 	String desc;
+
 	@JsonProperty("body")
 	Body body;
+
 	@JsonProperty("person")
 	String person;
+
 	@JsonProperty("period")
 	String period;
+
 	@JsonProperty("series")
 	String series;
+
 	@JsonProperty("width")
 	String width;
+
 	@JsonProperty("height")
 	String height;
+
 	@JsonProperty("length")
 	String length;
+
 	@JsonProperty("photo")
 	Photo photo;
+
 	@JsonProperty("urls")
 	Urls urls;
 

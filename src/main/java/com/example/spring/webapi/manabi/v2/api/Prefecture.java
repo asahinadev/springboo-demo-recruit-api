@@ -14,11 +14,13 @@ public class Prefecture
 
 	@Override
 	protected Class<PrefectureResponse> type() {
+
 		return PrefectureResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getManabi().getPrefecture();
 	}
 }

@@ -13,6 +13,7 @@ public abstract class ParameterBase implements Serializable {
 
 	@Override
 	public final String toString() {
+
 		ReflectionToStringBuilder builder = new ReflectionToStringBuilder(this);
 		builder.setExcludeNullValues(true);
 		return builder.toString();
@@ -20,15 +21,18 @@ public abstract class ParameterBase implements Serializable {
 
 	@Override
 	public final boolean equals(Object obj) {
+
 		return EqualsBuilder.reflectionEquals(this, obj);
 	}
 
 	@Override
 	public final int hashCode() {
+
 		return HashCodeBuilder.reflectionHashCode(this);
 	}
 
 	public static boolean empty(List<String> list) {
+
 		if (list == null) {
 			return true;
 		}

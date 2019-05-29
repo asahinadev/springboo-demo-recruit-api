@@ -20,16 +20,19 @@ public enum YesNo {
 	NO("0", "対象外");
 
 	final String id;
+
 	final String label;
 
 	@Override
 	@JsonValue
 	public String toString() {
+
 		return getId();
 	}
 
 	@JsonCreator
 	public static YesNo fromValue(String id) {
+
 		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), NO);
 	}
 }

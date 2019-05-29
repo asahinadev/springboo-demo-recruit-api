@@ -14,11 +14,13 @@ public class Along
 
 	@Override
 	protected Class<AlongResponse> type() {
+
 		return AlongResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getManabi().getAlong();
 	}
 }

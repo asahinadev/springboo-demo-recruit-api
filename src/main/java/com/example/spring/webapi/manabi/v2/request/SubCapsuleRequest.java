@@ -21,12 +21,16 @@ public class SubCapsuleRequest extends RequestType {
 
 	@JsonProperty("genre")
 	List<String> genres;
+
 	@JsonProperty("category")
 	List<String> categories;
+
 	@JsonProperty("capsule")
 	List<String> capsules;
+
 	@JsonProperty("sub_capsule")
 	List<String> subCapsules;
+
 	@JsonProperty("keyword")
 	String keyword;
 

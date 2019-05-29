@@ -14,11 +14,13 @@ public class City
 
 	@Override
 	protected Class<CityResponse> type() {
+
 		return CityResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getManabi().getCity();
 	}
 }

@@ -21,16 +21,19 @@ public enum KyotenType {
 	TK("TK", "通信");
 
 	final String id;
+
 	final String label;
 
 	@Override
 	@JsonValue
 	public String toString() {
+
 		return getId();
 	}
 
 	@JsonCreator
 	public static KyotenType fromValue(String id) {
+
 		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), TG);
 	}
 }

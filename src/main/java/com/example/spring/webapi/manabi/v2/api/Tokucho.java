@@ -14,11 +14,13 @@ public class Tokucho
 
 	@Override
 	protected Class<TokuchoResponse> type() {
+
 		return TokuchoResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getManabi().getTokucho();
 	}
 }

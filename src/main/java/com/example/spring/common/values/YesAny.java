@@ -20,16 +20,19 @@ public enum YesAny {
 	ANY("0", "絞り込み条件として設定しない");
 
 	final String id;
+
 	final String label;
 
 	@Override
 	@JsonValue
 	public String toString() {
+
 		return getId();
 	}
 
 	@JsonCreator
 	public static YesAny fromValue(String id) {
+
 		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), ANY);
 	}
 }

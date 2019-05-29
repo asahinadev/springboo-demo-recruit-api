@@ -7,6 +7,7 @@ public class AppNameGenerator extends AnnotationBeanNameGenerator {
 
 	@Override
 	protected String buildDefaultBeanName(BeanDefinition definition) {
+
 		return definition.getBeanClassName()
 				.replace(this.getClass().getPackage().getName(), "");
 	}

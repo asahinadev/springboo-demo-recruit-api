@@ -35,6 +35,7 @@ public class Urls extends MasterBase {
 		@Override
 		public Urls deserialize(JsonParser p, DeserializationContext ctxt)
 				throws IOException, JsonProcessingException {
+
 			TreeNode node = p.getCodec().readTree(p);
 			if (node.isValueNode()) {
 				Urls result = new Urls();

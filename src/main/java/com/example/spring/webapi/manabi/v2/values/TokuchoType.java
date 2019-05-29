@@ -19,16 +19,19 @@ public enum TokuchoType {
 	VALUE_02("02", "講座特徴");
 
 	final String id;
+
 	final String label;
 
 	@Override
 	@JsonValue
 	public String toString() {
+
 		return getId();
 	}
 
 	@JsonCreator
 	public static TokuchoType fromValue(String id) {
+
 		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), VALUE_01);
 	}
 

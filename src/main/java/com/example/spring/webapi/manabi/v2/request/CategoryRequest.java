@@ -21,6 +21,7 @@ public class CategoryRequest extends RequestType {
 
 	@JsonProperty("genre")
 	List<String> genres;
+
 	@JsonProperty("category")
 	List<String> categories;
 

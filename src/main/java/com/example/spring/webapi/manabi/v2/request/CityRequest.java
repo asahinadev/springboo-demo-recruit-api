@@ -22,12 +22,16 @@ public class CityRequest extends RequestType {
 
 	@JsonProperty("city")
 	List<String> cities;
+
 	@JsonProperty("prefecture")
 	List<String> prefectures;
+
 	@JsonProperty("area")
 	List<String> areas;
+
 	@JsonProperty("keyword")
 	String keyword;
+
 	@JsonProperty("map_disp")
 	YesNo mapDisp;
 

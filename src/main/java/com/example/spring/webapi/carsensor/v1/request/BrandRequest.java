@@ -21,6 +21,7 @@ public class BrandRequest extends RequestType {
 
 	@JsonProperty("code")
 	List<String> codes;
+
 	@JsonProperty("country")
 	List<String> countries;
 

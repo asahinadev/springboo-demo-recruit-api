@@ -14,11 +14,13 @@ public class SmallArea
 
 	@Override
 	protected Class<SmallAreaResponse> type() {
+
 		return SmallAreaResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getHotpepper().getSmallArea();
 	}
 }

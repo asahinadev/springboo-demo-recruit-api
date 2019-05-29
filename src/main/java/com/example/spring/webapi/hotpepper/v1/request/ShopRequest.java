@@ -19,6 +19,7 @@ public class ShopRequest extends RequestType {
 
 	@JsonProperty("keyword")
 	String keyword;
+
 	@JsonProperty("tel")
 	String tel;
 

@@ -20,16 +20,19 @@ public enum AlongType {
 	SW("00030", "地下鉄");
 
 	final String id;
+
 	final String label;
 
 	@Override
 	@JsonValue
 	public String toString() {
+
 		return getId();
 	}
 
 	@JsonCreator
 	public static AlongType fromValue(String id) {
+
 		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), JR);
 	}
 }

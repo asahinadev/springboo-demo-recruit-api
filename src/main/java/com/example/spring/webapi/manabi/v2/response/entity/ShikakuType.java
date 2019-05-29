@@ -25,6 +25,7 @@ public class ShikakuType extends MasterBase {
 		@Override
 		public ShikakuType deserialize(JsonParser p, DeserializationContext ctxt)
 				throws IOException, JsonProcessingException {
+
 			TreeNode node = p.getCodec().readTree(p);
 			if (node.isValueNode()) {
 				ShikakuType result = new ShikakuType();

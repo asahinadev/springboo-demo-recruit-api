@@ -14,11 +14,13 @@ public class Brand
 
 	@Override
 	protected Class<BrandResponse> type() {
+
 		return BrandResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getCarcensor().getBrand();
 	}
 }

@@ -14,11 +14,13 @@ public class Usedcar
 
 	@Override
 	protected Class<UsedcarResponse> type() {
+
 		return UsedcarResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getCarcensor().getUsedcar();
 	}
 }

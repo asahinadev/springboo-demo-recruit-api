@@ -21,8 +21,10 @@ public class DeptDetailRequest extends RequestType {
 
 	@JsonProperty("dept_detail")
 	List<String> deptDetails;
+
 	@JsonProperty("dept")
 	List<String> depts;
+
 	@JsonProperty("in_use")
 	String inUse;
 

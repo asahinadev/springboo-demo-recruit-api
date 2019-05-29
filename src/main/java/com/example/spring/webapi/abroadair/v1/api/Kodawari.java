@@ -14,11 +14,13 @@ public class Kodawari
 
 	@Override
 	protected Class<KodawariResponse> type() {
+
 		return KodawariResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getAbroadair().getKodawari();
 	}
 }

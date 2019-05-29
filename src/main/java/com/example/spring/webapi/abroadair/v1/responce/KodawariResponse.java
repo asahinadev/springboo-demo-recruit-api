@@ -24,6 +24,7 @@ public class KodawariResponse extends ResponseType<KodawariResponse.Results> {
 		@Deprecated
 		@JsonProperty("kodaw")
 		public void setKodaw(List<Kodawari> kodawaris) {
+
 			this.setKodawaris(kodawaris);
 		}
 

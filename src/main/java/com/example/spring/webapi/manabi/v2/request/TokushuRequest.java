@@ -22,8 +22,10 @@ public class TokushuRequest extends RequestType {
 
 	@JsonProperty("tokushu")
 	List<String> tokushus;
+
 	@JsonProperty("kikaku")
 	List<String> kikakus;
+
 	@JsonProperty("has_event")
 	YesAny event;
 

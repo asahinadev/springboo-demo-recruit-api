@@ -22,12 +22,16 @@ public class CountryRequest extends RequestType {
 
 	@JsonProperty("area")
 	List<String> areas;
+
 	@JsonProperty("country")
 	List<String> countries;
+
 	@JsonProperty("keyword")
 	List<String> keyword;
+
 	@JsonProperty("in_use")
 	String inUse;
+
 	@JsonProperty("order")
 	Order order;
 

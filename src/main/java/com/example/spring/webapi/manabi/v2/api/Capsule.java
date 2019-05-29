@@ -14,11 +14,13 @@ public class Capsule
 
 	@Override
 	protected Class<CapsuleResponse> type() {
+
 		return CapsuleResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getManabi().getCapsule();
 	}
 }

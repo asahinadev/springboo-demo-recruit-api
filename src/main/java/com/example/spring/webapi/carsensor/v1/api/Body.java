@@ -14,11 +14,13 @@ public class Body
 
 	@Override
 	protected Class<BodyResponse> type() {
+
 		return BodyResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getCarcensor().getBody();
 	}
 }

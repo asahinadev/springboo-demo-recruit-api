@@ -13,10 +13,13 @@ public class Price extends ParameterBase {
 
 	@JsonProperty("min")
 	Integer min;
+
 	@JsonProperty("max")
 	Integer max;
+
 	@JsonProperty("commission")
 	Integer commission;
+
 	@JsonProperty("all_month")
 	Price allMonth;
 

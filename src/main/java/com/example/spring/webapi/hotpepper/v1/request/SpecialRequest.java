@@ -21,6 +21,7 @@ public class SpecialRequest extends RequestType {
 
 	@JsonProperty("special")
 	List<String> specials;
+
 	@JsonProperty("special_category")
 	List<String> specialCategories;
 

@@ -21,8 +21,10 @@ public class CapsuleRequest extends RequestType {
 
 	@JsonProperty("genre")
 	List<String> genres;
+
 	@JsonProperty("category")
 	List<String> categories;
+
 	@JsonProperty("capsule")
 	List<String> capsules;
 

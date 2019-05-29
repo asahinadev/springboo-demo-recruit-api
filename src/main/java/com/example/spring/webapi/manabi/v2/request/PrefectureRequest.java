@@ -21,8 +21,10 @@ public class PrefectureRequest extends RequestType {
 
 	@JsonProperty("prefecture")
 	List<String> prefectures;
+
 	@JsonProperty("area")
 	List<String> areas;
+
 	@JsonProperty("keyword")
 	String keyword;
 

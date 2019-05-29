@@ -12,6 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 class JsonHttpMessageConverter extends AbstractJackson2HttpMessageConverter {
 
 	private static ObjectMapper mapper() {
+
 		ObjectMapper om = new ObjectMapper();
 
 		om.setSerializationInclusion(Include.NON_NULL);
@@ -21,11 +22,13 @@ class JsonHttpMessageConverter extends AbstractJackson2HttpMessageConverter {
 	}
 
 	public JsonHttpMessageConverter() {
+
 		super(mapper());
 	}
 
 	@Override
 	public List<MediaType> getSupportedMediaTypes() {
+
 		// 強制的に実行
 		return Arrays.asList(MediaType.ALL);
 	}

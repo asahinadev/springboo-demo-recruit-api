@@ -45,39 +45,47 @@ public enum Range {
 	MANABI_START_TIME_RANGE_7("6", "夜間 (21:00～23:59)"),
 
 	;;
+
 	final String id;
+
 	final String label;
 
 	@Override
 	@JsonValue
 	public String toString() {
+
 		return getId().toString();
 	}
 
 	@JsonCreator
 	public static Range fromValue(String id) {
+
 		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), NONE);
 	}
 
 	public static List<Range> hotpepperValues() {
+
 		return Arrays.stream(values())
 				.filter(i -> i.name().startsWith("HOTPEPPER_RANGE"))
 				.collect(Collectors.toList());
 	}
 
 	public static List<Range> manabiValues() {
+
 		return Arrays.stream(values())
 				.filter(i -> i.name().startsWith("MANABI_RANGE"))
 				.collect(Collectors.toList());
 	}
 
 	public static List<Range> manabiJukoPriceValues() {
+
 		return Arrays.stream(values())
 				.filter(i -> i.name().startsWith("MANABI_JUKO_PRICE_RANGE"))
 				.collect(Collectors.toList());
 	}
 
 	public static List<Range> manabiStartTimeValues() {
+
 		return Arrays.stream(values())
 				.filter(i -> i.name().startsWith("MANABI_START_TIME_RANGE"))
 				.collect(Collectors.toList());

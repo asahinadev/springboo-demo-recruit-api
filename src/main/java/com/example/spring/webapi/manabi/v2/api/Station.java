@@ -14,11 +14,13 @@ public class Station
 
 	@Override
 	protected Class<StationResponse> type() {
+
 		return StationResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getManabi().getStation();
 	}
 }

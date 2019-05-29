@@ -14,11 +14,13 @@ public class ShikakuType
 
 	@Override
 	protected Class<ShikakuTypeResponse> type() {
+
 		return ShikakuTypeResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getManabi().getShikakuType();
 	}
 }

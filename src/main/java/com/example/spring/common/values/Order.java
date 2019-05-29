@@ -46,45 +46,56 @@ public enum Order {
 	AP_ROAD_AIRE_CITY_ORDER_2("2", "都市名"),
 
 	;
+
 	final String id;
+
 	final String label;
 
 	@Override
 	@JsonValue
 	public String toString() {
+
 		return getId().toString();
 	}
 
 	@JsonCreator
 	public static Order fromValue(String id) {
+
 		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), NONE);
 	}
 
 	public static List<Order> values(String startsWith) {
+
 		return Arrays.stream(values()).filter(i -> i.name().startsWith(startsWith)).collect(Collectors.toList());
 	}
 
 	public static List<Order> hotpepperValues() {
+
 		return values("HOTPEPER_ORDER");
 	}
 
 	public static List<Order> manabiValues() {
+
 		return values("MANABI_ORDER");
 	}
 
 	public static List<Order> carcensorUsedValues() {
+
 		return values("CARCENSOR_USED__ORDER");
 	}
 
 	public static List<Order> carcensorCatalogValues() {
+
 		return values("CARCENSOR_CATALOG_ORDER");
 	}
 
 	public static List<Order> aproadaireValues() {
+
 		return values("AP_ROAD_AIRE_ORDER");
 	}
 
 	public static List<Order> aproadaireCityValues() {
+
 		return values("AP_ROAD_AIRE_CITY_ORDER");
 	}
 

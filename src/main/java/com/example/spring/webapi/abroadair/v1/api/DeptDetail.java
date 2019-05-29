@@ -14,11 +14,13 @@ public class DeptDetail
 
 	@Override
 	protected Class<DeptDetailResponse> type() {
+
 		return DeptDetailResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getAbroadair().getDeptDetail();
 	}
 

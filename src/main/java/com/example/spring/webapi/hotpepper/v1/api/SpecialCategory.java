@@ -14,11 +14,13 @@ public class SpecialCategory
 
 	@Override
 	protected Class<SpecialCategoryResponse> type() {
+
 		return SpecialCategoryResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getHotpepper().getSpecialCategory();
 	}
 }

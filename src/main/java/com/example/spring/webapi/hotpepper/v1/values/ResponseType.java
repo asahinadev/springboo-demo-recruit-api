@@ -26,16 +26,19 @@ public enum ResponseType {
 	RESPONCE_A("credit_card+special", "全て");
 
 	final String id;
+
 	final String label;
 
 	@Override
 	@JsonValue
 	public String toString() {
+
 		return getId();
 	}
 
 	@JsonCreator
 	public static ResponseType fromValue(String id) {
+
 		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), RESPONCE_A);
 	}
 }

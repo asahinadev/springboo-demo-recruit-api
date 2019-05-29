@@ -14,11 +14,13 @@ public class Pref
 
 	@Override
 	protected Class<PrefResponse> type() {
+
 		return PrefResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getCarcensor().getPrefecture();
 	}
 }

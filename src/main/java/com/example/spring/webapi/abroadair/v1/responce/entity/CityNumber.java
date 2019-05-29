@@ -13,8 +13,10 @@ public class CityNumber extends MasterBase {
 
 	@JsonProperty("number")
 	String number;
+
 	@JsonProperty("summary")
 	String summary;
+
 	@JsonProperty("open_jaw")
 	String openJaw;
 

@@ -26,6 +26,7 @@ public abstract class ApiBase<I extends RequestType, O extends ResponseType<?>> 
 	protected RestTemplate restTemplate;
 
 	public ApiBase() {
+
 		restTemplate = new RestTemplate(
 				Arrays.asList(new JsonHttpMessageConverter()));
 		restTemplate.setInterceptors(Arrays.asList(
@@ -36,6 +37,7 @@ public abstract class ApiBase<I extends RequestType, O extends ResponseType<?>> 
 	protected RecruitApiConfig config;
 
 	public O accept(I request) {
+
 		RequestEntity<?> entry;
 
 		init();
@@ -73,10 +75,12 @@ public abstract class ApiBase<I extends RequestType, O extends ResponseType<?>> 
 	}
 
 	protected void init() {
+
 		// nop
 	}
 
 	protected HttpMethod method() {
+
 		return HttpMethod.GET;
 	}
 

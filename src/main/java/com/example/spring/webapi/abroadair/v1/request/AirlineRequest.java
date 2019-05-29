@@ -21,6 +21,7 @@ public class AirlineRequest extends RequestType {
 
 	@JsonProperty("airline")
 	List<String> airlines;
+
 	@JsonProperty("keyword")
 	List<String> keyword;
 

@@ -38,6 +38,7 @@ public class Tokucho extends MasterBase {
 		@Override
 		public Tokucho deserialize(JsonParser p, DeserializationContext ctxt)
 				throws IOException, JsonProcessingException {
+
 			TreeNode node = p.getCodec().readTree(p);
 			if (node.isValueNode()) {
 				Tokucho result = new Tokucho();

@@ -14,11 +14,13 @@ public class School
 
 	@Override
 	protected Class<SchoolResponse> type() {
+
 		return SchoolResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getManabi().getSchoolKyoten();
 	}
 }

@@ -14,11 +14,13 @@ public class Category
 
 	@Override
 	protected Class<CategoryResponse> type() {
+
 		return CategoryResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getManabi().getCategory();
 	}
 }

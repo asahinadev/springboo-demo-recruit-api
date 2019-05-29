@@ -28,11 +28,13 @@ public abstract class RequestType extends ParameterBase {
 	public String key;
 
 	public Long start = 0L;
+
 	public Long count = 0L;
 
 	@SuppressWarnings("unchecked")
 	@SneakyThrows
 	public final MultiValueMap<String, String> convert() {
+
 		MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
 
 		ObjectMapper om = new ObjectMapper();
@@ -80,12 +82,14 @@ public abstract class RequestType extends ParameterBase {
 	}
 
 	public void add(MultiValueMap<String, String> map, String name, List<String> list) {
+
 		if (list != null && !list.isEmpty()) {
 			map.addAll(name, list);
 		}
 	}
 
 	public <E> void add(MultiValueMap<String, String> map, String name, List<E> list, Function<E, String> mapper) {
+
 		if (list != null && !list.isEmpty()) {
 			map.addAll(name, list.stream().map(mapper).collect(Collectors.toList()));
 		}
@@ -94,24 +98,28 @@ public abstract class RequestType extends ParameterBase {
 	public <E> void add(
 			MultiValueMap<String, String> map, String name, List<E> list, Function<E, String> mapper,
 			Predicate<E> predicate) {
+
 		if (list != null && !list.isEmpty()) {
 			map.addAll(name, list.stream().filter(predicate).map(mapper).collect(Collectors.toList()));
 		}
 	}
 
 	public void add(MultiValueMap<String, String> map, String name, String text) {
+
 		if (StringUtils.isNotEmpty(text)) {
 			map.add(name, text);
 		}
 	}
 
 	public void add(MultiValueMap<String, String> map, String name, Enum<?> text) {
+
 		if (text != null) {
 			map.add(name, text.toString());
 		}
 	}
 
 	public void add(MultiValueMap<String, String> map, String name, Number text) {
+
 		if (text != null) {
 			map.add(name, text.toString());
 		}

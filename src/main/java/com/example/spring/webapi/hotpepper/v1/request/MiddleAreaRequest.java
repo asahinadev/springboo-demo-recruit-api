@@ -21,8 +21,10 @@ public class MiddleAreaRequest extends RequestType {
 
 	@JsonProperty("large_area")
 	List<String> largeAreas;
+
 	@JsonProperty("middle_area")
 	List<String> middleAreas;
+
 	@JsonProperty("keyword")
 	String keyword;
 

@@ -15,12 +15,16 @@ public class Photo extends MasterBase {
 
 	@JsonProperty("front")
 	Urls front;
+
 	@JsonProperty("rear")
 	Urls rear;
+
 	@JsonProperty("inpane")
 	Urls inpane;
+
 	@JsonProperty("main")
 	Urls main;
+
 	@JsonProperty("sub")
 	List<String> sub;
 

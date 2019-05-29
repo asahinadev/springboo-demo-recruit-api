@@ -14,11 +14,13 @@ public class Shop
 
 	@Override
 	protected Class<ShopResponse> type() {
+
 		return ShopResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getHotpepper().getShop();
 	}
 }

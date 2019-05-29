@@ -14,11 +14,13 @@ public class Tsushin
 
 	@Override
 	protected Class<TsushinResponse> type() {
+
 		return TsushinResponse.class;
 	}
 
 	@Override
 	protected URI uri() {
+
 		return config.getManabi().getTsushin();
 	}
 }

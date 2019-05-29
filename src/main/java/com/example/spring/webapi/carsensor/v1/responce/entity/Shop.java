@@ -14,12 +14,16 @@ public class Shop extends MasterBase {
 
 	@JsonProperty("country")
 	Country country;
+
 	@JsonProperty("lat")
 	Double lat;
+
 	@JsonProperty("lng")
 	Double lng;
+
 	@JsonProperty("datum")
 	Datum datum;
+
 	@JsonProperty("pref")
 	Pref pref;
 

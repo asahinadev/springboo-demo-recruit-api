@@ -21,6 +21,7 @@ public class GenreRequest extends RequestType {
 
 	@JsonProperty("code")
 	List<String> codes;
+
 	@JsonProperty("keyword")
 	String keyword;
 

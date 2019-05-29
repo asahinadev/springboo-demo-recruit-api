@@ -22,12 +22,16 @@ public class AlongRequest extends RequestType {
 
 	@JsonProperty("along")
 	List<String> alongs;
+
 	@JsonProperty("along_type")
 	List<AlongType> alongTypes;
+
 	@JsonProperty("city")
 	List<String> cities;
+
 	@JsonProperty("prefecture")
 	List<String> prefectures;
+
 	@JsonProperty("keyword")
 	String keyword;
 
