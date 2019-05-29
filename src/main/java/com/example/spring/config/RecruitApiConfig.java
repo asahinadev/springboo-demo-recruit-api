@@ -24,6 +24,8 @@ public class RecruitApiConfig {
 
 	Abroadair abroadair;
 
+	Abroad abroad;
+
 	@Data
 	public static class Hotpepper {
 
@@ -108,6 +110,32 @@ public class RecruitApiConfig {
 		URI color;
 
 		URI body;
+	}
+
+	@Data
+	public static class Abroad {
+
+		URI tour;
+
+		URI area;
+
+		URI country;
+
+		URI city;
+
+		URI hotel;
+
+		URI airline;
+
+		URI kodawari;
+
+		URI spot;
+
+		URI osusume;
+
+		URI theme;
+
+		URI tourTally;
 	}
 
 	@Data

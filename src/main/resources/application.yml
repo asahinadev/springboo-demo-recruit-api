@@ -46,4 +46,18 @@ recruit-api:
     city: "http://webservice.recruit.co.jp/ab-road-air/city/v1/"
     dept-detail: "http://webservice.recruit.co.jp/ab-road-air/dept_detail/v1/"
     airline: "http://webservice.recruit.co.jp/ab-road-air/airline/v1/"
-    kodawari: "http://webservice.recruit.co.jp/ab-road-air/kodaw/v1/"
+    kodawari: "http://webservice.recruit.co.jp/ab-road-air/kodaw/v1/"
+    
+  abroad:
+    tour: "http://webservice.recruit.co.jp/ab-road/tour/v1/"
+    area: "http://webservice.recruit.co.jp/ab-road/area/v1/"
+    country: "http://webservice.recruit.co.jp/ab-road/country/v1/"
+    city: "http://webservice.recruit.co.jp/ab-road/city/v1/"
+    hotel: "http://webservice.recruit.co.jp/ab-road/hotel/v1/"
+    airline: "http://webservice.recruit.co.jp/ab-road/airline/v1/"
+    kodawari: "http://webservice.recruit.co.jp/ab-road/kodawari/v1/"
+    spot: "http://webservice.recruit.co.jp/ab-road/spot/v1/"
+    osusume: "http://webservice.recruit.co.jp/ab-road/osusume/v1/"
+    theme: "http://webservice.recruit.co.jp/ab-road/theme/v1/"
+    tour-tally: "http://webservice.recruit.co.jp/ab-road/tour_tally/v1/"
+
