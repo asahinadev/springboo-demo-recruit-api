@@ -3,6 +3,7 @@ package com.example.spring.webapi.abroad.v1.entity;
 import com.example.spring.common.entity.MasterBase;
 import com.example.spring.common.entity.Urls;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -40,5 +41,6 @@ public class Spot extends MasterBase {
 	City city;
 
 	@JsonProperty("url")
+	@JsonDeserialize(using = Urls.Deserializer.class)
 	Urls url;
 }
