@@ -8,8 +8,6 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.ApiTest;
-import com.example.spring.common.Parameter;
-import com.example.spring.webapi.hotpepper.v1.api.ServiceArea;
 import com.example.spring.webapi.hotpepper.v1.request.ServiceAreaRequest;
 import com.example.spring.webapi.hotpepper.v1.responce.ServiceAreaResponse;
 
@@ -22,28 +20,33 @@ public class ServiceAreaTest
 		extends ApiTest<ServiceArea, ServiceAreaRequest, ServiceAreaResponse> {
 
 	@Parameterized.Parameters
-	public static List<Parameter> data() {
-		return Arrays.asList(new Parameter());
+	public static List<ServiceAreaRequest> data() {
+
+		return Arrays.asList(
+				ServiceAreaRequest.of().build());
 	}
 
-	final Parameter parameter;
+	final ServiceAreaRequest parameter;
 
 	@Autowired
 	ServiceArea api;
 
 	@Override
 	protected ServiceArea api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
-		request = new ServiceAreaRequest();
+
+		request = parameter;
 		request.setKey(config.getKey());
 	}
 

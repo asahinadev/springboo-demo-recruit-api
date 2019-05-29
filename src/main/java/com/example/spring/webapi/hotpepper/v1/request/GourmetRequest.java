@@ -44,31 +44,31 @@ public class GourmetRequest extends RequestType {
 	String address;
 
 	@JsonProperty("special")
-	List<String> special;
+	List<String> specials;
 
 	@JsonProperty("special_or")
-	List<String> specialOr;
+	List<String> specialsOr;
 
 	@JsonProperty("special_category")
-	List<String> specialCategory;
+	List<String> specialCategories;
 
 	@JsonProperty("special_category_or")
-	List<String> specialCategoryOr;
+	List<String> specialCategoriesOr;
 
 	@JsonProperty("large_service_area")
-	String largeServiceArea;
+	String largeServiceAreas;
 
 	@JsonProperty("service_area")
-	List<String> serviceArea;
+	List<String> serviceAreas;
 
 	@JsonProperty("large_area")
-	List<String> largeArea;
+	List<String> largeAreas;
 
 	@JsonProperty("middle_area")
-	List<String> middleArea;
+	List<String> middleAreas;
 
 	@JsonProperty("small_area")
-	List<String> smallArea;
+	List<String> smallAreas;
 
 	@JsonProperty("keyword")
 	String keyword;
@@ -158,7 +158,7 @@ public class GourmetRequest extends RequestType {
 	YesAny nightView;
 
 	@JsonProperty("open_air")
-	YesAny open_air;
+	YesAny openAir;
 
 	@JsonProperty("show")
 	YesAny show;

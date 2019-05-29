@@ -8,8 +8,6 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.ApiTest;
-import com.example.spring.common.Parameter;
-import com.example.spring.webapi.hotpepper.v1.api.Budget;
 import com.example.spring.webapi.hotpepper.v1.request.BudgetRequest;
 import com.example.spring.webapi.hotpepper.v1.responce.BudgetResponse;
 
@@ -22,28 +20,33 @@ public class BudgetTest
 		extends ApiTest<Budget, BudgetRequest, BudgetResponse> {
 
 	@Parameterized.Parameters
-	public static List<Parameter> data() {
-		return Arrays.asList(new Parameter());
+	public static List<BudgetRequest> data() {
+
+		return Arrays.asList(
+				BudgetRequest.of().build());
 	}
 
-	final Parameter parameter;
+	final BudgetRequest parameter;
 
 	@Autowired
 	Budget api;
 
 	@Override
 	protected Budget api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
-		request = new BudgetRequest();
+
+		request = parameter;
 		request.setKey(config.getKey());
 	}
 

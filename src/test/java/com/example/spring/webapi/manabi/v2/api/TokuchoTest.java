@@ -8,7 +8,6 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.ApiTest;
-import com.example.spring.common.Parameter;
 import com.example.spring.common.values.YesAny;
 import com.example.spring.webapi.manabi.v2.request.TokuchoRequest;
 import com.example.spring.webapi.manabi.v2.response.TokuchoResponse;
@@ -22,13 +21,6 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class TokuchoTest
 		extends ApiTest<Tokucho, TokuchoRequest, TokuchoResponse> {
-
-	@RequiredArgsConstructor
-	public static class TokuchoParameter extends Parameter {
-		final TokuchoType tokuchoType;
-		final SchoolType tktgType;
-		final YesAny pickup;
-	}
 
 	@Parameterized.Parameters
 	public static List<TokuchoRequest> data() {
@@ -57,16 +49,19 @@ public class TokuchoTest
 
 	@Override
 	protected Tokucho api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

@@ -8,8 +8,6 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.ApiTest;
-import com.example.spring.common.Parameter;
-import com.example.spring.webapi.hotpepper.v1.api.CreditCard;
 import com.example.spring.webapi.hotpepper.v1.request.CreditCardRequest;
 import com.example.spring.webapi.hotpepper.v1.responce.CreditCardResponse;
 
@@ -22,28 +20,32 @@ public class CreditCardTest
 		extends ApiTest<CreditCard, CreditCardRequest, CreditCardResponse> {
 
 	@Parameterized.Parameters
-	public static List<Parameter> data() {
+	public static List<CreditCardRequest> data() {
+
 		return Arrays.asList(
-				new Parameter());
+				CreditCardRequest.of().build());
 	}
 
-	final Parameter parameter;
+	final CreditCardRequest parameter;
 
 	@Autowired
 	CreditCard api;
 
 	@Override
 	protected CreditCard api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = new CreditCardRequest();
 		request.setKey(config.getKey());
 	}

@@ -1,16 +1,13 @@
 package com.example.spring.webapi.hotpepper.v1.api;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
 import org.junit.runners.Parameterized;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.ApiTest;
-import com.example.spring.common.Parameter;
-import com.example.spring.webapi.hotpepper.v1.api.Shop;
 import com.example.spring.webapi.hotpepper.v1.request.ShopRequest;
 import com.example.spring.webapi.hotpepper.v1.responce.ShopResponse;
 
@@ -23,37 +20,37 @@ public class ShopTest
 		extends ApiTest<Shop, ShopRequest, ShopResponse> {
 
 	@Parameterized.Parameters
-	public static List<Parameter> data() {
-		return Arrays.asList(
-				new Parameter("05058281355"),
-				new Parameter("オーガニック"));
+	public static List<ShopRequest> data() {
+
+		List<ShopRequest> list = new ArrayList<>();
+		list.add(ShopRequest.of().tel("05058281355").build());
+		list.add(ShopRequest.of().keyword("月島").build());
+		list.add(ShopRequest.of().build());
+		return list;
 	}
 
-	final Parameter parameter;
+	final ShopRequest parameter;
 
 	@Autowired
 	Shop api;
 
 	@Override
 	protected Shop api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
-		request = new ShopRequest();
+
+		request = parameter;
 		request.setKey(config.getKey());
-		if (StringUtils.isNumeric(parameter.k)
-				&& StringUtils.isAsciiPrintable(parameter.k)) {
-			request.setTel(parameter.k);
-		} else {
-			request.setKeyword(parameter.k);
-		}
 	}
 
 }

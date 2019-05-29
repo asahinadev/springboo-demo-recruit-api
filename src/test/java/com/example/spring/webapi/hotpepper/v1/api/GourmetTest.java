@@ -1,6 +1,6 @@
 package com.example.spring.webapi.hotpepper.v1.api;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.runners.Parameterized;
@@ -8,12 +8,13 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.ApiTest;
-import com.example.spring.common.JsonBuilder;
-import com.example.spring.webapi.hotpepper.v1.api.Gourmet;
+import com.example.spring.common.values.Datum;
+import com.example.spring.common.values.Order;
+import com.example.spring.common.values.Range;
+import com.example.spring.common.values.YesAny;
+import com.example.spring.common.values.YesNoAny;
 import com.example.spring.webapi.hotpepper.v1.request.GourmetRequest;
 import com.example.spring.webapi.hotpepper.v1.responce.GourmetResponse;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectReader;
 
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
@@ -25,103 +26,98 @@ public class GourmetTest
 		extends ApiTest<Gourmet, GourmetRequest, GourmetResponse> {
 
 	@Parameterized.Parameters
-	public static List<String> data() {
-		return Arrays.asList(
-				JsonBuilder.builder().add("id", "J001217232").toString(),
-				JsonBuilder.builder().set("name", "オーガニック").toString(),
-				JsonBuilder.builder().set("name_kana", "おーがにっく").toString(),
-				JsonBuilder.builder().set("name_any", "おーがにっく").toString(),
-				JsonBuilder.builder().set("tel", "035550000").toString(),
-				JsonBuilder.builder().set("name", "オーガニック").set("address", "東京都").toString(),
-				JsonBuilder.builder().add("special", "LT0086", "LT0045").toString(),
-				JsonBuilder.builder().add("special_or", "LT0086", "LT0045").toString(),
-				JsonBuilder.builder().set("name", "オーガニック").add("special_category", "SPD1", "SPD3").toString(),
-				JsonBuilder.builder().set("name", "オーガニック").add("special_category_or", "SPD1", "SPD3").toString(),
-				JsonBuilder.builder().set("large_service_area", "SS10").toString(),
-				JsonBuilder.builder().add("service_area", "SA11", "SA12").toString(),
-				JsonBuilder.builder().add("large_area", "Z011", "Z012").toString(),
-				JsonBuilder.builder().add("middle_area", "Y005", "Y006").toString(),
-				JsonBuilder.builder().add("small_area", "X015", "X016").toString(),
-				JsonBuilder.builder().set("name", "オーガニック").set("keyword", "東京都").toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("range", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("range", 2).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("range", 3).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("range", 4).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("range", 5).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("datum", "tokyo").toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("datum", "world").toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("ktai_coupon", 1).toString(),
-				JsonBuilder.builder().set("name", "オーガニック").add("genre", "G007", "G001").toString(),
-				JsonBuilder.builder().set("name", "オーガニック").add("budget", "B002", "B001").toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("party_capacity", 10).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("wifi", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("wedding", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("course", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("free_drink", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("free_food", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("private_room", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("horigotatsu", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("tatami", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("cocktail", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("shochu", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("sake", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("wine", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("card", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("non_smoking", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("charter", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("ktai", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("parking", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("barrier_free", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("sommelier", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("night_view", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("open_air", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("show", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("equipment", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("karaoke", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("band", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("tv", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("lunch", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("midnight", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("midnight_meal", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("english", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("pet", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("child", 1).toString(),
+	public static List<GourmetRequest> data() {
 
-				// credit_card
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).add("credit_card", "c01", "c02").toString(),
-
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("order", 1).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("order", 2).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("order", 3).toString(),
-				JsonBuilder.builder().set("lat", 41).set("lng", 135).set("order", 4).toString(),
-
-				// dummy
-				JsonBuilder.builder().add("id", "J001217232").toString());
+		List<GourmetRequest> list = new ArrayList<>();
+		list.add(GourmetRequest.of().build());
+		list.add(GourmetRequest.of().id($("J001217232")).build());
+		list.add(GourmetRequest.of().name("オーガニック").build());
+		list.add(GourmetRequest.of().nameKana("オーガニック").build());
+		list.add(GourmetRequest.of().nameAny("オーガニック").build());
+		list.add(GourmetRequest.of().tel("035550000").build());
+		list.add(GourmetRequest.of().name("オーガニック").address("東京都").build());
+		list.add(GourmetRequest.of().specials($("LT0080")).build());
+		list.add(GourmetRequest.of().specialsOr($("LT0080")).build());
+		list.add(GourmetRequest.of().name("オーガニック").specialCategories($("SPA9")).build());
+		list.add(GourmetRequest.of().name("オーガニック").specialCategoriesOr($("SPA9")).build());
+		list.add(GourmetRequest.of().largeServiceAreas("SS10").build());
+		list.add(GourmetRequest.of().serviceAreas($("SA10")).build());
+		list.add(GourmetRequest.of().largeAreas($("Z011")).build());
+		list.add(GourmetRequest.of().middleAreas($("Y004")).build());
+		list.add(GourmetRequest.of().smallAreas($("X004")).build());
+		for (Range r : Range.hotpepperValues()) {
+			for (Order o : Order.hotpepperValues()) {
+				for (Datum d : Datum.values()) {
+					list.add(GourmetRequest.of().lat(35.609167D).lng(139.730167D).range(r).order(o).datum(d).build());
+				}
+			}
+		}
+		list.add(GourmetRequest.of().keyword("居酒屋").genre($("G001")).build());
+		for (YesNoAny f : YesNoAny.values()) {
+			list.add(GourmetRequest.of().keyword("居酒屋").ktaiCoupon(f).build());
+		}
+		list.add(GourmetRequest.of().keyword("居酒屋").budget($("B002")).build());
+		list.add(GourmetRequest.of().keyword("居酒屋").partyCapacity(50).build());
+		for (YesAny f : YesAny.values()) {
+			list.add(GourmetRequest.of().keyword("居酒屋").wifi(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").wedding(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").course(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").freeDrink(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").freeFood(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").privateRoom(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").horigotatsu(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").tatami(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").cocktail(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").shochu(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").sake(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").wine(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").card(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").nonSmoking(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").charter(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").ktai(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").parking(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").barrierFree(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").sommelier(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").nightView(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").openAir(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").show(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").equipment(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").karaoke(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").band(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").tv(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").lunch(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").midnight(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").midnightMeal(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").english(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").pet(f).build());
+			list.add(GourmetRequest.of().keyword("居酒屋").child(f).build());
+		}
+		list.add(GourmetRequest.of().keyword("居酒屋").creditCard($("c01")).build());
+		return list;
 	}
 
-	final String parameter;
+	final GourmetRequest parameter;
 
 	@Autowired
 	Gourmet api;
 
 	@Override
 	protected Gourmet api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
-
-	ObjectMapper o = new ObjectMapper();
-	ObjectReader r = o.readerFor(GourmetRequest.class);
 
 	@Override
 	@SneakyThrows
 	protected void setParameter() {
-		request = r.readValue(parameter);
+
+		request = parameter;
 		request.setKey(config.getKey());
 	}
 

@@ -1,6 +1,6 @@
 package com.example.spring.webapi.hotpepper.v1.api;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.runners.Parameterized;
@@ -8,8 +8,6 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.ApiTest;
-import com.example.spring.common.Parameter;
-import com.example.spring.webapi.hotpepper.v1.api.MiddleArea;
 import com.example.spring.webapi.hotpepper.v1.request.MiddleAreaRequest;
 import com.example.spring.webapi.hotpepper.v1.responce.MiddleAreaResponse;
 
@@ -22,36 +20,38 @@ public class MiddleAreaTest
 		extends ApiTest<MiddleArea, MiddleAreaRequest, MiddleAreaResponse> {
 
 	@Parameterized.Parameters
-	public static List<Parameter> data() {
-		return Arrays.asList(
-				new Parameter(1, $("Z011", "Z011")), // L
-				new Parameter(2, $("Y004", "Y005")), // M
-				new Parameter("月島"), // K
-				new Parameter());
+	public static List<MiddleAreaRequest> data() {
+
+		List<MiddleAreaRequest> list = new ArrayList<>();
+		list.add(MiddleAreaRequest.of().largeAreas($("Z011")).build());
+		list.add(MiddleAreaRequest.of().middleAreas($("Y004")).build());
+		list.add(MiddleAreaRequest.of().keyword("月島").build());
+		list.add(MiddleAreaRequest.of().build());
+		return list;
 	}
 
-	final Parameter parameter;
+	final MiddleAreaRequest parameter;
 
 	@Autowired
 	MiddleArea api;
 
 	@Override
 	protected MiddleArea api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
-		request = new MiddleAreaRequest();
+
+		request = parameter;
 		request.setKey(config.getKey());
-		request.setLargeAreas(parameter.c1);
-		request.setMiddleAreas(parameter.c2);
-		request.setKeyword(parameter.k);
 	}
 
 }
