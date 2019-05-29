@@ -71,7 +71,7 @@ public class GourmetRequest extends RequestType {
 	List<String> smallAreas;
 
 	@JsonProperty("keyword")
-	String keyword;
+	List<String> keyword;
 
 	@JsonProperty("lat")
 	Double lat;

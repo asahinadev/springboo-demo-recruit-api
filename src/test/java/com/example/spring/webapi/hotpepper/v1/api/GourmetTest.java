@@ -52,47 +52,47 @@ public class GourmetTest
 				}
 			}
 		}
-		list.add(GourmetRequest.of().keyword("居酒屋").genre($("G001")).build());
+		list.add(GourmetRequest.of().keyword($("居酒屋")).genre($("G001")).build());
 		for (YesNoAny f : YesNoAny.values()) {
-			list.add(GourmetRequest.of().keyword("居酒屋").ktaiCoupon(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).ktaiCoupon(f).build());
 		}
-		list.add(GourmetRequest.of().keyword("居酒屋").budget($("B002")).build());
-		list.add(GourmetRequest.of().keyword("居酒屋").partyCapacity(50).build());
+		list.add(GourmetRequest.of().keyword($("居酒屋")).budget($("B002")).build());
+		list.add(GourmetRequest.of().keyword($("居酒屋")).partyCapacity(50).build());
 		for (YesAny f : YesAny.values()) {
-			list.add(GourmetRequest.of().keyword("居酒屋").wifi(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").wedding(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").course(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").freeDrink(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").freeFood(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").privateRoom(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").horigotatsu(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").tatami(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").cocktail(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").shochu(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").sake(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").wine(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").card(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").nonSmoking(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").charter(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").ktai(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").parking(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").barrierFree(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").sommelier(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").nightView(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").openAir(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").show(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").equipment(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").karaoke(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").band(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").tv(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").lunch(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").midnight(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").midnightMeal(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").english(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").pet(f).build());
-			list.add(GourmetRequest.of().keyword("居酒屋").child(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).wifi(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).wedding(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).course(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).freeDrink(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).freeFood(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).privateRoom(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).horigotatsu(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).tatami(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).cocktail(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).shochu(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).sake(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).wine(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).card(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).nonSmoking(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).charter(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).ktai(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).parking(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).barrierFree(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).sommelier(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).nightView(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).openAir(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).show(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).equipment(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).karaoke(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).band(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).tv(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).lunch(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).midnight(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).midnightMeal(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).english(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).pet(f).build());
+			list.add(GourmetRequest.of().keyword($("居酒屋")).child(f).build());
 		}
-		list.add(GourmetRequest.of().keyword("居酒屋").creditCard($("c01")).build());
+		list.add(GourmetRequest.of().keyword($("居酒屋")).creditCard($("c01")).build());
 		return list;
 	}
 
