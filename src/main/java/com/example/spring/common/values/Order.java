@@ -55,6 +55,10 @@ public enum Order {
 	AP_ROAD_HOTEL_ORDER_2("1", "エリアコード＋国名＋都市名順＋ホテル名順"),
 	AP_ROAD_HOTEL_ORDER_3("2", "ABROAD指定順"),
 
+	AP_ROAD_TALLY_ORDER_1("0", "該当ツアー数多い順"),
+	AP_ROAD_TALLY_ORDER_2("1", "該当ツアー数少ない順"),
+	AP_ROAD_TALLY_ORDER_3("2", "エリアコード＋国名＋都市名順"),
+
 	AP_ROAD_AIRE_ORDER_1("1", "価格安い順"),
 	AP_ROAD_AIRE_ORDER_2("2", "価格高い順"),
 	AP_ROAD_AIRE_ORDER_3("3", "期間短い順"),
@@ -137,4 +141,9 @@ public enum Order {
 		return values("AP_ROAD_HOTEL_ORDER");
 	}
 
+	public static List<Order> aproadTallyValues() {
+
+		return values("AP_ROAD_TALLY_ORDER");
+	}
+	
 }
