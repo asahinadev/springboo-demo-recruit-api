@@ -47,6 +47,10 @@ public enum Order {
 	AP_ROAD_COUNTRY_ORDER_2("1", "国名順"),
 	AP_ROAD_COUNTRY_ORDER_3("2", "ABROAD指定順"),
 
+	AP_ROAD_CITY_ORDER_1("0", "エリアコード＋国名＋都市名順"),
+	AP_ROAD_CITY_ORDER_2("1", "国名＋都市名順"),
+	AP_ROAD_CITY_ORDER_3("2", "ABROAD指定順"),
+
 	AP_ROAD_AIRE_ORDER_1("1", "価格安い順"),
 	AP_ROAD_AIRE_ORDER_2("2", "価格高い順"),
 	AP_ROAD_AIRE_ORDER_3("3", "期間短い順"),
@@ -117,6 +121,11 @@ public enum Order {
 	public static List<Order> aproadCountryValues() {
 
 		return values("AP_ROAD_COUNTRY_ORDER");
+	}
+
+	public static List<Order> aproadCityValues() {
+
+		return values("AP_ROAD_CITY_ORDER");
 	}
 
 }
