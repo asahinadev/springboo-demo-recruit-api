@@ -22,5 +22,5 @@ public class DeptDetailResponse extends ResponseType<DeptDetailResponse.Results>
 		List<DeptDetail> deptDetails;
 
 	}
- 
+
 }

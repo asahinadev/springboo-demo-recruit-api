@@ -42,6 +42,9 @@ public enum Order {
 	AP_ROAD_AIRE_ORDER_3("3", "期間短い順"),
 	AP_ROAD_AIRE_ORDER_4("4", "期間長い順"),
 
+	AP_ROAD_AIRE_CITY_ORDER_1("1", "国名＋都市名"),
+	AP_ROAD_AIRE_CITY_ORDER_2("2", "都市名"),
+
 	;
 	final String id;
 	final String label;
@@ -57,34 +60,32 @@ public enum Order {
 		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), NONE);
 	}
 
+	public static List<Order> values(String startsWith) {
+		return Arrays.stream(values()).filter(i -> i.name().startsWith(startsWith)).collect(Collectors.toList());
+	}
+
 	public static List<Order> hotpepperValues() {
-		return Arrays.stream(values())
-				.filter(i -> i.name().startsWith("HOTPEPER_ORDER"))
-				.collect(Collectors.toList());
+		return values("HOTPEPER_ORDER");
 	}
 
 	public static List<Order> manabiValues() {
-		return Arrays.stream(values())
-				.filter(i -> i.name().startsWith("MANABI_ORDER"))
-				.collect(Collectors.toList());
+		return values("MANABI_ORDER");
 	}
 
 	public static List<Order> carcensorUsedValues() {
-		return Arrays.stream(values())
-				.filter(i -> i.name().startsWith("CARCENSOR_USED__ORDER"))
-				.collect(Collectors.toList());
+		return values("CARCENSOR_USED__ORDER");
 	}
 
 	public static List<Order> carcensorCatalogValues() {
-		return Arrays.stream(values())
-				.filter(i -> i.name().startsWith("CARCENSOR_CATALOG_ORDER"))
-				.collect(Collectors.toList());
+		return values("CARCENSOR_CATALOG_ORDER");
 	}
 
 	public static List<Order> aproadaireValues() {
-		return Arrays.stream(values())
-				.filter(i -> i.name().startsWith("AP_ROAD_AIRE_ORDER"))
-				.collect(Collectors.toList());
+		return values("AP_ROAD_AIRE_ORDER");
+	}
+
+	public static List<Order> aproadaireCityValues() {
+		return values("AP_ROAD_AIRE_CITY_ORDER");
 	}
 
 }
