@@ -2,7 +2,7 @@ package com.example.spring.webapi.manabi.v2.response.entity;
 
 import java.io.IOException;
 
-import com.example.spring.common.MasterBase;
+import com.example.spring.common.entity.MasterBase;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -1,4 +1,4 @@
-package com.example.spring.common;
+package com.example.spring.common.rest;
 
 import java.net.URI;
 import java.util.Arrays;
@@ -14,14 +14,18 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.example.spring.common.ResponseType.Results;
 import com.example.spring.config.RecruitApiConfig;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
-public abstract class ApiBase<I extends RequestType, O extends ResponseType<?>> {
+public abstract class ApiBase<
+// @formatter:off
+		I extends RequestType, 
+		O extends ResponseType<? extends ResponseType.Results>
+		// @formatter:on
+> {
 
 	protected RestTemplate restTemplate;
 
@@ -36,7 +40,7 @@ public abstract class ApiBase<I extends RequestType, O extends ResponseType<?>> 
 	@Autowired
 	protected RecruitApiConfig config;
 
-	public O accept(I request) {
+	public final O accept(I request) {
 
 		RequestEntity<?> entry;
 
@@ -63,10 +67,11 @@ public abstract class ApiBase<I extends RequestType, O extends ResponseType<?>> 
 		if (responseEntity.getStatusCodeValue() != 200) {
 			throw new NoSuchElementException();
 		}
-		O response = responseEntity.getBody();
-		Results results = response.getResults();
 
-		if (results != null && results.getError() != null && !results.getError().isEmpty()) {
+		O response = responseEntity.getBody();
+		ResponseType.Results results = response.getResults();
+
+		if (results != null && results.isError()) {
 			throw new IllegalStateException(results.getError().get(0).getMessage());
 		}
 

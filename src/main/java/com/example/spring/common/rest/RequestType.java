@@ -1,4 +1,4 @@
-package com.example.spring.common;
+package com.example.spring.common.rest;
 
 import java.util.Collection;
 import java.util.List;
@@ -11,25 +11,30 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
+import com.example.spring.common.entity.ParameterBase;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.SneakyThrows;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @SuppressWarnings("serial")
 public abstract class RequestType extends ParameterBase {
 
 	@JsonProperty("key")
 	public String key;
 
-	public Long start = 0L;
+	Long start;
 
-	public Long count = 0L;
+	Long count;
 
 	@SuppressWarnings("unchecked")
 	@SneakyThrows
@@ -69,14 +74,10 @@ public abstract class RequestType extends ParameterBase {
 
 		}
 
-		map.add("key", getKey());
-		map.add("format", "json");
-		if (start > 0) {
-			add(map, "start", start);
-		}
-		if (count > 0) {
-			add(map, "count", count);
-		}
+		add(map, "key", getKey());
+		add(map, "format", "json");
+		add(map, "start", start);
+		add(map, "count", count);
 
 		return map;
 	}
@@ -120,7 +121,7 @@ public abstract class RequestType extends ParameterBase {
 
 	public void add(MultiValueMap<String, String> map, String name, Number text) {
 
-		if (text != null) {
+		if (text != null && text.intValue() <= 0) {
 			map.add(name, text.toString());
 		}
 	}

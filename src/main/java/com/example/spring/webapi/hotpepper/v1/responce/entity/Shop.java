@@ -3,8 +3,8 @@ package com.example.spring.webapi.hotpepper.v1.responce.entity;
 import java.util.List;
 import java.util.Map;
 
-import com.example.spring.common.ParameterBase;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.example.spring.common.entity.ParameterBase;
+import com.example.spring.common.entity.Urls;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;
@@ -21,68 +21,29 @@ public class Shop extends ParameterBase {
 	@JsonProperty("name")
 	String name;
 
-	@JsonProperty("name_kana")
-	String kana;
-
-	@JsonProperty("shop_detail_memo")
-	String shopDetailMemo;
-
-	@JsonProperty("budget_memo")
-	String budgetMemo;
-
-	@JsonProperty("non_smoking")
-	String smoking;
-
-	@JsonProperty("parking")
-	String parking;
-
-	@JsonProperty("other_memo")
-	String otherMemo;
-
 	@JsonProperty("logo_image")
 	String logo;
 
-	@JsonProperty("open")
-	String open;
-
-	@JsonProperty("close")
-	String close;
-
-	@JsonProperty("midnight")
-	String midnight;
-
-	@JsonProperty("genre")
-	Genre genre;
-
-	@JsonProperty("sub_genre")
-	Genre subGenre;
+	@JsonProperty("name_kana")
+	String kana;
 
 	@JsonProperty("address")
 	String address;
 
-	@JsonProperty("lat")
-	Double lat;
-
-	@JsonProperty("lng")
-	Double lng;
-
 	@JsonProperty("station_name")
-	String station;
+	String stationName;
 
-	@JsonProperty("mobile_access")
-	String mobileAccess;
-
-	@JsonProperty("access")
-	String access;
+	@JsonProperty("ktai_coupon")
+	String ktaiCoupon;
 
 	@JsonProperty("large_service_area")
-	LargeServiceArea largeServiceArea;;
+	LargeServiceArea largeServiceArea;
 
 	@JsonProperty("service_area")
-	ServiceArea ServiceArea;;
+	ServiceArea ServiceArea;
 
 	@JsonProperty("large_area")
-	LargeArea largeArea;;
+	LargeArea largeArea;
 
 	@JsonProperty("middle_area")
 	MiddleArea middleArea;
@@ -90,29 +51,137 @@ public class Shop extends ParameterBase {
 	@JsonProperty("small_area")
 	SmallArea smallArea;
 
+	@JsonProperty("lat")
+	Double lat;
+
+	@JsonProperty("lng")
+	Double lng;
+
+	@JsonProperty("genre")
+	Genre genre;
+
+	@JsonProperty("sub_genre")
+	Genre subGenre;
+
 	@JsonProperty("budget")
 	Budget budget;
 
-	@JsonProperty("urls")
-	Map<String, String> urls;
+	@JsonProperty("budget_memo")
+	String budgetMemo;
 
-	@JsonProperty("photo")
-	Map<String, Map<String, String>> photos;
-
-	@JsonProperty("coupon_urls")
-	Map<String, String> couponUrls;
-
-	@JsonProperty("desc")
-	String desc;
-
-	@JsonProperty("ktai_coupon")
-	String ktaiCoupon;
+	@JsonProperty("catch")
+	String catchCopy;
 
 	@JsonProperty("capacity")
 	Long capacity;
 
+	@JsonProperty("access")
+	String access;
+
+	@JsonProperty("mobile_access")
+	String mobileAccess;
+
+	@JsonProperty("urls")
+	Urls urls;
+
+	@JsonProperty("photo")
+	Map<String, Urls> photos;
+
+	@JsonProperty("open")
+	String open;
+
+	@JsonProperty("close")
+	String close;
+
 	@JsonProperty("party_capacity")
 	Long partyCapacity;
+
+	@JsonProperty("wifi")
+	String wifi;
+
+	@JsonProperty("wedding")
+	String wedding;
+
+	@JsonProperty("course")
+	String course;
+
+	@JsonProperty("free_drink")
+	String freeDrink;
+
+	@JsonProperty("free_food")
+	String freeFood;
+
+	@JsonProperty("private_room")
+	String privateRoom;
+
+	@JsonProperty("horigotatsu")
+	String horigotatsu;
+
+	@JsonProperty("tatami")
+	String tatami;
+
+	@JsonProperty("card")
+	String card;
+
+	@JsonProperty("non_smoking")
+	String nonSmoking;
+
+	@JsonProperty("charter")
+	String charter;
+
+	@JsonProperty("ktai")
+	String ktai;
+
+	@JsonProperty("parking")
+	String parking;
+
+	@JsonProperty("barrier_free")
+	String barrier_free;
+
+	@JsonProperty("other_memo")
+	String otherMemo;
+
+	@JsonProperty("sommelier")
+	String sommelier;
+
+	@JsonProperty("open_air")
+	String open_air;
+
+	@JsonProperty("show")
+	String show;
+
+	@JsonProperty("equipment")
+	String equipment;
+
+	@JsonProperty("karaoke")
+	String karaoke;
+
+	@JsonProperty("band")
+	String band;
+
+	@JsonProperty("tv")
+	String tv;
+
+	@JsonProperty("english")
+	String english;
+
+	@JsonProperty("pet")
+	String pet;
+
+	@JsonProperty("child")
+	String child;
+
+	@JsonProperty("lunch")
+	String lunch;
+
+	@JsonProperty("midnight")
+	String midnight;
+
+	@JsonProperty("shop_detail_memo")
+	String shopDetailMemo;
+
+	@JsonProperty("coupon_urls")
+	Urls couponUrls;
 
 	@JsonProperty("special")
 	List<Special> specials;
@@ -120,7 +189,7 @@ public class Shop extends ParameterBase {
 	@JsonProperty("credit_card")
 	List<CreditCard> creditCards;
 
-	@JsonAnySetter
-	Map<String, String> any;
+	@JsonProperty("desc")
+	String desc;
 
 }

@@ -1,4 +1,4 @@
-package com.example.spring.common;
+package com.example.spring.common.entity;
 
 import java.io.Serializable;
 import java.util.List;

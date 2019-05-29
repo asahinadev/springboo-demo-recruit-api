@@ -1,6 +1,6 @@
 package com.example.spring.webapi.manabi.v2.response.entity;
 
-import com.example.spring.common.ParameterBase;
+import com.example.spring.common.entity.ParameterBase;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;

@@ -4,7 +4,7 @@ import java.net.URI;
 
 import org.springframework.stereotype.Service;
 
-import com.example.spring.common.ApiBase;
+import com.example.spring.common.rest.ApiBase;
 import com.example.spring.webapi.manabi.v2.request.StationRequest;
 import com.example.spring.webapi.manabi.v2.response.StationResponse;
 

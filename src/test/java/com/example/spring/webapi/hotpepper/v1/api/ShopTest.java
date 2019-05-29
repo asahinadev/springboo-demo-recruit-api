@@ -24,8 +24,8 @@ public class ShopTest
 
 		List<ShopRequest> list = new ArrayList<>();
 		list.add(ShopRequest.of().tel("05058281355").build());
-		list.add(ShopRequest.of().keyword("月島").build());
-		list.add(ShopRequest.of().build());
+		list.add(ShopRequest.of().keyword("月島もんじゃ").build());
+
 		return list;
 	}
 
@@ -51,6 +51,7 @@ public class ShopTest
 
 		request = parameter;
 		request.setKey(config.getKey());
+
 	}
 
 }

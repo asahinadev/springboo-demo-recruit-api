@@ -3,7 +3,8 @@ package com.example.spring.webapi.abroadair.v1.responce.entity;
 import java.util.Date;
 import java.util.List;
 
-import com.example.spring.common.MasterBase;
+import com.example.spring.common.entity.MasterBase;
+import com.example.spring.common.entity.Urls;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;

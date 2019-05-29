@@ -1,5 +1,6 @@
 logging:
   pattern:    console: "[%-5p] %m%n"  level:
     root: WARN
-    com.example.spring.common.LoggingClientHttpRequestInterceptor: INFO
+    com.example.spring.common.rest.LoggingClientHttpRequestInterceptor: INFO
+    org.springframework.web.client.RestTemplate: DEBUG
 

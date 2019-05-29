@@ -1,6 +1,6 @@
 package com.example.spring.webapi.manabi.v2.request;
 
-import com.example.spring.common.RequestType;
+import com.example.spring.common.rest.RequestType;
 import com.example.spring.common.values.YesAny;
 import com.example.spring.webapi.manabi.v2.values.SchoolType;
 import com.example.spring.webapi.manabi.v2.values.TokuchoType;

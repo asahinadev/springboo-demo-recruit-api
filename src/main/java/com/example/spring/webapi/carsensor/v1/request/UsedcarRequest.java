@@ -2,7 +2,7 @@ package com.example.spring.webapi.carsensor.v1.request;
 
 import java.util.List;
 
-import com.example.spring.common.RequestType;
+import com.example.spring.common.rest.RequestType;
 import com.example.spring.common.values.Datum;
 import com.example.spring.common.values.Order;
 import com.example.spring.common.values.YesAny;

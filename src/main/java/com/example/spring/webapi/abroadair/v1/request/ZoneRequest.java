@@ -1,6 +1,6 @@
 package com.example.spring.webapi.abroadair.v1.request;
 
-import com.example.spring.common.RequestType;
+import com.example.spring.common.rest.RequestType;
 
 import lombok.Builder;
 import lombok.Getter;

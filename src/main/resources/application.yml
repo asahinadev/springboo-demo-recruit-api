@@ -3,8 +3,6 @@ server:
 
 logging:  level:
     root: WARN
-    com.example.spring.common.LoggingClientHttpRequestInterceptor: INFO
-#    com.example: INFO#    org.springframework.web.client.RestTemplate: DEBUG
 
 recruit-api:
   key: e46b9d43c2e3544f

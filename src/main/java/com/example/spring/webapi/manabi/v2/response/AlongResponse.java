@@ -2,7 +2,7 @@ package com.example.spring.webapi.manabi.v2.response;
 
 import java.util.List;
 
-import com.example.spring.common.ResponseType;
+import com.example.spring.common.rest.ResponseType;
 import com.example.spring.webapi.manabi.v2.response.entity.Along;
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,9 +1,11 @@
-package com.example.spring.common;
+package com.example.spring.common.rest;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.spring.common.entity.Error;
+import com.example.spring.common.entity.ParameterBase;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -46,6 +48,15 @@ public abstract class ResponseType<T extends ResponseType.Results>
 		@JsonProperty("error")
 		@JsonDeserialize(using = ErrorsDeserializer.class)
 		List<Error> error;
+
+		public boolean isError() {
+
+			if (error == null) {
+				return false;
+			}
+
+			return !error.isEmpty();
+		}
 	}
 
 	public static class ErrorsDeserializer extends JsonDeserializer<List<Error>> {

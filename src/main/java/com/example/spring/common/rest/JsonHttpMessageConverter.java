@@ -1,4 +1,4 @@
-package com.example.spring.common;
+package com.example.spring.common.rest;
 
 import java.util.Arrays;
 import java.util.List;

@@ -50,6 +50,7 @@ public class LargeAreaTest
 	protected void setParameter() {
 
 		request = parameter;
+		request.setKey(config.getKey());
 	}
 
 }

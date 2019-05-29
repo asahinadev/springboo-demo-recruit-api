@@ -2,7 +2,7 @@ package com.example.spring.webapi.manabi.v2.request;
 
 import java.util.List;
 
-import com.example.spring.common.RequestType;
+import com.example.spring.common.rest.RequestType;
 import com.example.spring.webapi.manabi.v2.values.AlongType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 

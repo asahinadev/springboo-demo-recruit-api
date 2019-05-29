@@ -2,7 +2,8 @@ package com.example.spring.webapi.carsensor.v1.responce.entity;
 
 import java.util.List;
 
-import com.example.spring.common.MasterBase;
+import com.example.spring.common.entity.MasterBase;
+import com.example.spring.common.entity.Urls;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.example.spring.common;
+package com.example.spring.common.rest;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

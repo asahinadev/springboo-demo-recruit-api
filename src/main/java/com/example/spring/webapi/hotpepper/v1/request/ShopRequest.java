@@ -1,6 +1,6 @@
 package com.example.spring.webapi.hotpepper.v1.request;
 
-import com.example.spring.common.RequestType;
+import com.example.spring.common.rest.RequestType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;

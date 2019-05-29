@@ -2,7 +2,7 @@ package com.example.spring.webapi.abroadair.v1.responce;
 
 import java.util.List;
 
-import com.example.spring.common.ResponseType;
+import com.example.spring.common.rest.ResponseType;
 import com.example.spring.webapi.abroadair.v1.responce.entity.DeptDetail;
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -29,7 +29,6 @@ public class GourmetTest
 	public static List<GourmetRequest> data() {
 
 		List<GourmetRequest> list = new ArrayList<>();
-		list.add(GourmetRequest.of().build());
 		list.add(GourmetRequest.of().id($("J001217232")).build());
 		list.add(GourmetRequest.of().name("オーガニック").build());
 		list.add(GourmetRequest.of().nameKana("オーガニック").build());

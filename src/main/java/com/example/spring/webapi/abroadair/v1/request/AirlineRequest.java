@@ -2,7 +2,7 @@ package com.example.spring.webapi.abroadair.v1.request;
 
 import java.util.List;
 
-import com.example.spring.common.RequestType;
+import com.example.spring.common.rest.RequestType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
