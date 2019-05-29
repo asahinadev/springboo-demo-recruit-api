@@ -21,4 +21,5 @@ public class City
 	protected URI uri() {
 		return config.getAbroadair().getCity();
 	}
+
 }

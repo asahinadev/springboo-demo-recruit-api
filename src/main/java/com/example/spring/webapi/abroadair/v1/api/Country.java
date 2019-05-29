@@ -21,4 +21,5 @@ public class Country
 	protected URI uri() {
 		return config.getAbroadair().getCountry();
 	}
+
 }

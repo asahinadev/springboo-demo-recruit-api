@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.spring.ApiTest;
+import com.example.spring.common.values.Order;
 import com.example.spring.webapi.abroadair.v1.request.CountryRequest;
 import com.example.spring.webapi.abroadair.v1.responce.CountryResponse;
 
@@ -23,6 +24,17 @@ public class CountryTest
 	public static List<CountryRequest> data() {
 
 		List<CountryRequest> list = new ArrayList<>();
+
+		list.add(CountryRequest.of().areas($("EUR")).build());
+		list.add(CountryRequest.of().countries($("BE")).build());
+		list.add(CountryRequest.of().keyword($("ベトナム")).build());
+		list.add(CountryRequest.of().inUse("0").build());
+		list.add(CountryRequest.of().inUse("1").build());
+		for (Order order : Order.aproadaireCityValues()) {
+			list.add(CountryRequest.of().order(order).build());
+
+		}
+
 		list.add(CountryRequest.of().build());
 		return list;
 
