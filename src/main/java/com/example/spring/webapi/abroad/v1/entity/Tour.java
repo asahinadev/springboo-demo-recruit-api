@@ -20,6 +20,9 @@ public class Tour extends ParameterBase {
 	@JsonProperty("last_update")
 	String lastUpdate;
 
+	@JsonProperty("last_list_update")
+	String lastListUpdate;
+
 	@JsonProperty("term")
 	String term;
 
@@ -66,7 +69,7 @@ public class Tour extends ParameterBase {
 	List<Theme> themes;
 
 	@JsonProperty("img")
-	Urls img;
+	List<Urls> img;
 
 	@JsonProperty("osusume")
 	Osusume osusume;
