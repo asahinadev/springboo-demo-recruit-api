@@ -3,7 +3,7 @@ package com.example.spring.webapi.hotpepper.v1.responce;
 import java.util.List;
 
 import com.example.spring.common.rest.ResponseType;
-import com.example.spring.webapi.hotpepper.v1.responce.entity.CreditCard;
+import com.example.spring.webapi.hotpepper.v1.entity.CreditCard;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;

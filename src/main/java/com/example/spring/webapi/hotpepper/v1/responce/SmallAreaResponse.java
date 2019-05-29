@@ -3,7 +3,7 @@ package com.example.spring.webapi.hotpepper.v1.responce;
 import java.util.List;
 
 import com.example.spring.common.rest.ResponseType;
-import com.example.spring.webapi.hotpepper.v1.responce.entity.SmallArea;
+import com.example.spring.webapi.hotpepper.v1.entity.SmallArea;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;

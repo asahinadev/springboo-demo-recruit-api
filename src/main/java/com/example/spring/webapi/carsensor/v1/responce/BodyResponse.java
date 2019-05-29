@@ -3,7 +3,7 @@ package com.example.spring.webapi.carsensor.v1.responce;
 import java.util.List;
 
 import com.example.spring.common.rest.ResponseType;
-import com.example.spring.webapi.carsensor.v1.responce.entity.Body;
+import com.example.spring.webapi.carsensor.v1.entity.Body;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;
