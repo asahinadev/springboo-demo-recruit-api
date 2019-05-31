@@ -1,0 +1,22 @@
+
+apply plugin: 'eclipse'
+
+eclipse {
+    project {
+        name    = 'recruit-api'
+
+        natures = [
+            'org.eclipse.jdt.core.javanature', 
+            'org.eclipse.buildship.core.gradleprojectnature', 
+            'org.thymeleaf.extras.eclipse.core.ThymeleafNature'
+        ]
+
+        
+        //if you want to append some extra build command:
+        buildCommand 'org.eclipse.jdt.core.javabuilder'
+        buildCommand 'org.eclipse.buildship.core.gradleprojectbuilder'
+        buildCommand 'org.springframework.ide.eclipse.boot.validation.springbootbuilder'
+        buildCommand 'org.thymeleaf.extras.eclipse.core.ThymeleafBuilder'
+
+    }
+}
