@@ -11,6 +11,11 @@ HELP.md
 .springBeans
 .sts4-cache
 .mvn
+bin
+gradle
+.gradle
+gradlew
+gradlew.bat
 
 ### IntelliJ IDEA ###
 .idea
@@ -28,3 +33,4 @@ HELP.md
 
 ### VS Code ###
 .vscode/
+
