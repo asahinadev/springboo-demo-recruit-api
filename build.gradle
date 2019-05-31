@@ -1,47 +1,48 @@
-
 plugins {
-    id 'java'
-    id 'org.springframework.boot' version '2.1.5.RELEASE'
-    id 'io.freefair.lombok' version '3.6.4'
+	id 'org.springframework.boot' version '2.1.5.RELEASE'
+	id 'java'
+	id 'war'
 }
 
 apply plugin: 'io.spring.dependency-management'
-apply from: 'eclipse.gradle';
-
-repositories {
-    mavenCentral()
-}
 
 group = 'com.example.spring'
-
 version = '0.0.1'
 sourceCompatibility = '1.8'
 
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
 
 dependencies {
 
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.apache.commons:commons-lang3'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf'
+    implementation group: 'nz.net.ultraq.thymeleaf',  name: 'thymeleaf-layout-dialect'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    implementation group: 'org.apache.commons',       name: 'commons-lang3'
+    implementation group: 'org.webjars',              name: 'bootstrap',                    version: '4.3.1'
+    implementation group: 'org.webjars',              name: 'jquery',                       version: '3.4.1'
+    implementation group: 'org.webjars',              name: 'popper.js',                    version: '1.15.0'
+    implementation group: 'org.webjars',              name: 'datatables',                   version: '1.10.19'
+    implementation group: 'org.webjars',              name: 'webjars-locator-core',         version: '0.37'
+    implementation group: 'org.webjars',              name: 'font-awesome',                 version: '5.8.2'
+    implementation group: 'org.webjars',              name: 'datatables-fixedheader',       version: '3.1.4'
 
-    compileOnly 'org.springframework.boot:spring-boot-configuration-processor'
-    compileOnly 'org.projectlombok:lombok'
+    compileOnly group: 'org.springframework.boot', name: 'spring-boot-configuration-processor'
+    compileOnly group: 'org.projectlombok',        name: 'lombok'
 
-    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
-    annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor group: 'org.springframework.boot', name: 'spring-boot-configuration-processor'
+    annotationProcessor group: 'org.projectlombok',        name: 'lombok'
 
-    runtimeOnly 'org.springframework.boot:spring-boot-devtools'
-    runtimeOnly 'org.springframework.boot:spring-boot-starter-tomcat'
+    runtimeOnly group: 'org.springframework.boot', name: 'spring-boot-devtools'
+    runtimeOnly group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat'
 
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
     
 }
-
-
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}
-
-
-

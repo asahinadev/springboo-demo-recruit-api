@@ -2,7 +2,7 @@ server:
   port: 9002
 
 logging:  level:
-    root: WARN
+    root: INFO
 
 recruit-api:
   key: e46b9d43c2e3544f
