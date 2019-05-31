@@ -13,12 +13,6 @@ public class Usedcar
 		extends ApiBase<UsedcarRequest, UsedcarResponse> {
 
 	@Override
-	protected Class<UsedcarResponse> type() {
-
-		return UsedcarResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getCarcensor().getUsedcar();

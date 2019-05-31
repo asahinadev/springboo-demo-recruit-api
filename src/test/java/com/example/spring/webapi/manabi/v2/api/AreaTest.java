@@ -22,6 +22,7 @@ public class AreaTest
 
 	@Parameterized.Parameters
 	public static List<AreaRequest> data() {
+
 		return Arrays.asList(AreaRequest.of().build());
 	}
 
@@ -32,16 +33,19 @@ public class AreaTest
 
 	@Override
 	protected Area api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

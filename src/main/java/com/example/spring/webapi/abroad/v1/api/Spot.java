@@ -13,12 +13,6 @@ public class Spot
 		extends ApiBase<SpotRequest, SpotResponse> {
 
 	@Override
-	protected Class<SpotResponse> type() {
-
-		return SpotResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getAbroad().getSpot();

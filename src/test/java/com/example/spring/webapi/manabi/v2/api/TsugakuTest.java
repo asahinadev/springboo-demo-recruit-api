@@ -27,6 +27,7 @@ public class TsugakuTest
 
 	@Parameterized.Parameters
 	public static List<TsugakuRequest> data() {
+
 		List<TsugakuRequest> list = new ArrayList<>();
 		// list.add(TsugakuRequest.of().build());
 
@@ -116,16 +117,19 @@ public class TsugakuTest
 
 	@Override
 	protected Tsugaku api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

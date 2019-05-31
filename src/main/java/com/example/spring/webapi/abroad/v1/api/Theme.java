@@ -13,12 +13,6 @@ public class Theme
 		extends ApiBase<ThemeRequest, ThemeResponse> {
 
 	@Override
-	protected Class<ThemeResponse> type() {
-
-		return ThemeResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getAbroad().getTheme();

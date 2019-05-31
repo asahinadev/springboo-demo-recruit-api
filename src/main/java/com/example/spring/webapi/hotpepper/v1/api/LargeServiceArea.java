@@ -13,12 +13,6 @@ public class LargeServiceArea
 		extends ApiBase<LargeServiceAreaRequest, LargeServiceAreaResponse> {
 
 	@Override
-	protected Class<LargeServiceAreaResponse> type() {
-
-		return LargeServiceAreaResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getHotpepper().getLargeServiceArea();

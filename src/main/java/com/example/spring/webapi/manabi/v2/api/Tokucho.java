@@ -13,12 +13,6 @@ public class Tokucho
 		extends ApiBase<TokuchoRequest, TokuchoResponse> {
 
 	@Override
-	protected Class<TokuchoResponse> type() {
-
-		return TokuchoResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getManabi().getTokucho();

@@ -15,7 +15,9 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.example.spring.config.RecruitApiConfig;
+import com.example.spring.util.ClassUtil;
 
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -89,7 +91,11 @@ public abstract class ApiBase<
 		return HttpMethod.GET;
 	}
 
-	protected abstract Class<O> type();
+	@SneakyThrows
+	protected final Class<O> type() {
+
+		return ClassUtil.getGenericType(this, ApiBase.class, 1);
+	}
 
 	protected abstract URI uri();
 }

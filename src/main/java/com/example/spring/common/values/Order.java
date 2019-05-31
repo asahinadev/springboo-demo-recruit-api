@@ -145,5 +145,5 @@ public enum Order {
 
 		return values("AP_ROAD_TALLY_ORDER");
 	}
-	
+
 }

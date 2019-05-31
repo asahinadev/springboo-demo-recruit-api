@@ -21,6 +21,7 @@ public class BodyTest
 
 	@Parameterized.Parameters
 	public static List<BodyRequest> data() {
+
 		return Arrays.asList(
 				BodyRequest.of().build());
 	}
@@ -32,16 +33,19 @@ public class BodyTest
 
 	@Override
 	protected Body api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

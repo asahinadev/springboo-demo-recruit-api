@@ -13,12 +13,6 @@ public class Brand
 		extends ApiBase<BrandRequest, BrandResponse> {
 
 	@Override
-	protected Class<BrandResponse> type() {
-
-		return BrandResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getCarcensor().getBrand();

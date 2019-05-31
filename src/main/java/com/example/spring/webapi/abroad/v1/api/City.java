@@ -13,12 +13,6 @@ public class City
 		extends ApiBase<CityRequest, CityResponse> {
 
 	@Override
-	protected Class<CityResponse> type() {
-
-		return CityResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getAbroad().getCity();

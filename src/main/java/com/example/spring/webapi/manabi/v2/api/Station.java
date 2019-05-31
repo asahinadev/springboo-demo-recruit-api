@@ -13,12 +13,6 @@ public class Station
 		extends ApiBase<StationRequest, StationResponse> {
 
 	@Override
-	protected Class<StationResponse> type() {
-
-		return StationResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getManabi().getStation();

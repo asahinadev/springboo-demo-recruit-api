@@ -21,6 +21,7 @@ public class ColorTest
 
 	@Parameterized.Parameters
 	public static List<ColorRequest> data() {
+
 		return Arrays.asList(
 				ColorRequest.of().build());
 	}
@@ -32,16 +33,19 @@ public class ColorTest
 
 	@Override
 	protected Color api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

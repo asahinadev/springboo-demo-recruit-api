@@ -13,12 +13,6 @@ public class SmallArea
 		extends ApiBase<SmallAreaRequest, SmallAreaResponse> {
 
 	@Override
-	protected Class<SmallAreaResponse> type() {
-
-		return SmallAreaResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getHotpepper().getSmallArea();

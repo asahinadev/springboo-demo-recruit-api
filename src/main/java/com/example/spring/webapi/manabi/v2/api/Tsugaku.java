@@ -13,12 +13,6 @@ public class Tsugaku
 		extends ApiBase<TsugakuRequest, TsugakuResponse> {
 
 	@Override
-	protected Class<TsugakuResponse> type() {
-
-		return TsugakuResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getManabi().getKouza();

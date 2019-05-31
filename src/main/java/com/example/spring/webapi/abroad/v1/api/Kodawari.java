@@ -13,12 +13,6 @@ public class Kodawari
 		extends ApiBase<KodawariRequest, KodawariResponse> {
 
 	@Override
-	protected Class<KodawariResponse> type() {
-
-		return KodawariResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getAbroad().getKodawari();

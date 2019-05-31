@@ -22,6 +22,7 @@ public class CategoryTest
 
 	@Parameterized.Parameters
 	public static List<CategoryRequest> data() {
+
 		List<CategoryRequest> list = new ArrayList<>();
 		// list.add(CategoryRequest.of().build());
 
@@ -40,16 +41,19 @@ public class CategoryTest
 
 	@Override
 	protected Category api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

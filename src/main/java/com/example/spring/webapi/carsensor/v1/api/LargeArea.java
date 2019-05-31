@@ -13,12 +13,6 @@ public class LargeArea
 		extends ApiBase<LargeAreaRequest, LargeAreaResponse> {
 
 	@Override
-	protected Class<LargeAreaResponse> type() {
-
-		return LargeAreaResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getCarcensor().getLargeArea();

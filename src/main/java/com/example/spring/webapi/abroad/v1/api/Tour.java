@@ -13,12 +13,6 @@ public class Tour
 		extends ApiBase<TourRequest, TourResponse> {
 
 	@Override
-	protected Class<TourResponse> type() {
-
-		return TourResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getAbroad().getTour();

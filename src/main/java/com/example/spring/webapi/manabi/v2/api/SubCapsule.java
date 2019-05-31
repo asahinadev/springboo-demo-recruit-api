@@ -13,12 +13,6 @@ public class SubCapsule
 		extends ApiBase<SubCapsuleRequest, SubCapsuleResponse> {
 
 	@Override
-	protected Class<SubCapsuleResponse> type() {
-
-		return SubCapsuleResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getManabi().getSubCapsule();

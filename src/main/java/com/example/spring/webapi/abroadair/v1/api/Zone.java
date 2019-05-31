@@ -13,12 +13,6 @@ public class Zone
 		extends ApiBase<ZoneRequest, ZoneResponse> {
 
 	@Override
-	protected Class<ZoneResponse> type() {
-
-		return ZoneResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getAbroadair().getZone();

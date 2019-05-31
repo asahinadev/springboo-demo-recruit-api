@@ -13,12 +13,6 @@ public class Body
 		extends ApiBase<BodyRequest, BodyResponse> {
 
 	@Override
-	protected Class<BodyResponse> type() {
-
-		return BodyResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getCarcensor().getBody();

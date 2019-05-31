@@ -26,6 +26,7 @@ public class TsushinTest
 
 	@Parameterized.Parameters
 	public static List<TsushinRequest> data() {
+
 		List<TsushinRequest> list = new ArrayList<>();
 		// list.add(TsushinRequest.of().build());
 
@@ -107,16 +108,19 @@ public class TsushinTest
 
 	@Override
 	protected Tsushin api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

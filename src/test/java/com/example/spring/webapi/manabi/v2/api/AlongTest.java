@@ -23,6 +23,7 @@ public class AlongTest
 
 	@Parameterized.Parameters
 	public static List<AlongRequest> data() {
+
 		List<AlongRequest> list = new ArrayList<>();
 		// list.add(AlongRequest.of().build());
 
@@ -55,16 +56,19 @@ public class AlongTest
 
 	@Override
 	protected Along api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

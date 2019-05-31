@@ -23,6 +23,7 @@ public class TokushuTest
 
 	@Parameterized.Parameters
 	public static List<TokushuRequest> data() {
+
 		return Arrays.asList(
 				TokushuRequest.of().tokushus($("T700001")).build(),
 				TokushuRequest.of().kikakus($("GG11")).build(),
@@ -40,16 +41,19 @@ public class TokushuTest
 
 	@Override
 	protected Tokushu api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

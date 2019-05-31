@@ -13,12 +13,6 @@ public class Ticket
 		extends ApiBase<TicketRequest, TicketResponse> {
 
 	@Override
-	protected Class<TicketResponse> type() {
-
-		return TicketResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getAbroadair().getTicket();

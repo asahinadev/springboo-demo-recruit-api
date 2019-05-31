@@ -13,12 +13,6 @@ public class Budget
 		extends ApiBase<BudgetRequest, BudgetResponse> {
 
 	@Override
-	protected Class<BudgetResponse> type() {
-
-		return BudgetResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getHotpepper().getBudget();

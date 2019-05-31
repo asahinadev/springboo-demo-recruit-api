@@ -39,16 +39,19 @@ public class LageAreaTest
 
 	@Override
 	protected LargeArea api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

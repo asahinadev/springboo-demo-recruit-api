@@ -13,12 +13,6 @@ public class Area
 		extends ApiBase<AreaRequest, AreaResponse> {
 
 	@Override
-	protected Class<AreaResponse> type() {
-
-		return AreaResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getManabi().getArea();

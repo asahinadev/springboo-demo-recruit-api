@@ -13,12 +13,6 @@ public class Event
 		extends ApiBase<EventRequest, EventResponse> {
 
 	@Override
-	protected Class<EventResponse> type() {
-
-		return EventResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getManabi().getEvent();

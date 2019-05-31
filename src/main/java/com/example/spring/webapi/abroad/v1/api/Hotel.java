@@ -13,12 +13,6 @@ public class Hotel
 		extends ApiBase<HotelRequest, HotelResponse> {
 
 	@Override
-	protected Class<HotelResponse> type() {
-
-		return HotelResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getAbroad().getHotel();

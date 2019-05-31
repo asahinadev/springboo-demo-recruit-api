@@ -13,12 +13,6 @@ public class Shop
 		extends ApiBase<ShopRequest, ShopResponse> {
 
 	@Override
-	protected Class<ShopResponse> type() {
-
-		return ShopResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getHotpepper().getShop();

@@ -13,12 +13,6 @@ public class DeptDetail
 		extends ApiBase<DeptDetailRequest, DeptDetailResponse> {
 
 	@Override
-	protected Class<DeptDetailResponse> type() {
-
-		return DeptDetailResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getAbroadair().getDeptDetail();

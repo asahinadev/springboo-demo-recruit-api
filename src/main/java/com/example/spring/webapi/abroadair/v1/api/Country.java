@@ -13,12 +13,6 @@ public class Country
 		extends ApiBase<CountryRequest, CountryResponse> {
 
 	@Override
-	protected Class<CountryResponse> type() {
-
-		return CountryResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getAbroadair().getCountry();

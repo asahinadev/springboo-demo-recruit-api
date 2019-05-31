@@ -23,6 +23,7 @@ public class CityTest
 
 	@Parameterized.Parameters
 	public static List<CityRequest> data() {
+
 		List<CityRequest> list = new ArrayList<>();
 		// list.add(CityRequest.of().build());
 
@@ -53,16 +54,19 @@ public class CityTest
 
 	@Override
 	protected City api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

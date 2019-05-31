@@ -22,6 +22,7 @@ public class CapsuleTest
 
 	@Parameterized.Parameters
 	public static List<CapsuleRequest> data() {
+
 		List<CapsuleRequest> list = new ArrayList<>();
 		// list.add(CapsuleRequest.of().build());
 
@@ -42,16 +43,19 @@ public class CapsuleTest
 
 	@Override
 	protected Capsule api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

@@ -39,27 +39,32 @@ OUT  extends ResponseType<?>
 
 	@After
 	public final void after() {
+
 		logger().info("{}", response);
 	}
 
 	@Before
 	public final void before() {
+
 		setParameter();
 		logger().info("{}", request);
 	}
 
 	@Test
 	public final void testAccept() {
+
 		response = api().accept(request);
 		assertNotNull(response);
 	}
 
 	@SuppressWarnings("unchecked")
 	protected static <E> List<E> $(final E... parameters) {
+
 		return Arrays.asList(parameters);
 	}
 
 	protected static List<String> $(String... strings) {
+
 		return Arrays.asList(strings);
 	}
 }

@@ -13,12 +13,6 @@ public class CreditCard
 		extends ApiBase<CreditCardRequest, CreditCardResponse> {
 
 	@Override
-	protected Class<CreditCardResponse> type() {
-
-		return CreditCardResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getHotpepper().getCreditCard();

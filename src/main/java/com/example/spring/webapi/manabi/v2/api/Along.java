@@ -13,12 +13,6 @@ public class Along
 		extends ApiBase<AlongRequest, AlongResponse> {
 
 	@Override
-	protected Class<AlongResponse> type() {
-
-		return AlongResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getManabi().getAlong();

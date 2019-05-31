@@ -13,12 +13,6 @@ public class TourTally
 		extends ApiBase<TourTallyRequest, TourTallyResponse> {
 
 	@Override
-	protected Class<TourTallyResponse> type() {
-
-		return TourTallyResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getAbroad().getTourTally();

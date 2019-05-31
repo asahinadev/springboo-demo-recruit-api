@@ -13,12 +13,6 @@ public class CapsuleType
 		extends ApiBase<CapsuleTypeRequest, CapsuleTypeResponse> {
 
 	@Override
-	protected Class<CapsuleTypeResponse> type() {
-
-		return CapsuleTypeResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getManabi().getCapsuleType();

@@ -22,6 +22,7 @@ public class ShikakuTypeTest
 
 	@Parameterized.Parameters
 	public static List<ShikakuTypeRequest> data() {
+
 		return Arrays.asList(
 				ShikakuTypeRequest.of().shikakuTypes($("00")).build(),
 				ShikakuTypeRequest.of().shikakuTypes($("01")).build(),
@@ -37,16 +38,19 @@ public class ShikakuTypeTest
 
 	@Override
 	protected ShikakuType api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

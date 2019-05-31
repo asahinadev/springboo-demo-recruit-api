@@ -22,6 +22,7 @@ public class GenreTest
 
 	@Parameterized.Parameters
 	public static List<GenreRequest> data() {
+
 		return Arrays.asList(
 				GenreRequest.of().genres($("J000001")).build(),
 				GenreRequest.of().build());
@@ -34,16 +35,19 @@ public class GenreTest
 
 	@Override
 	protected Genre api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

@@ -13,12 +13,6 @@ public class ServiceArea
 		extends ApiBase<ServiceAreaRequest, ServiceAreaResponse> {
 
 	@Override
-	protected Class<ServiceAreaResponse> type() {
-
-		return ServiceAreaResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getHotpepper().getServiceArea();

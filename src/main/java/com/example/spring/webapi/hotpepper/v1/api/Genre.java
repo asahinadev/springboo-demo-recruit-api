@@ -13,12 +13,6 @@ public class Genre
 		extends ApiBase<GenreRequest, GenreResponse> {
 
 	@Override
-	protected Class<GenreResponse> type() {
-
-		return GenreResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getHotpepper().getGenre();

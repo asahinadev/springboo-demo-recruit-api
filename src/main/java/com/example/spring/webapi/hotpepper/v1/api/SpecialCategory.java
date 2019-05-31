@@ -13,12 +13,6 @@ public class SpecialCategory
 		extends ApiBase<SpecialCategoryRequest, SpecialCategoryResponse> {
 
 	@Override
-	protected Class<SpecialCategoryResponse> type() {
-
-		return SpecialCategoryResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getHotpepper().getSpecialCategory();

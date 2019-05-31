@@ -22,6 +22,7 @@ public class PrefectureTest
 
 	@Parameterized.Parameters
 	public static List<PrefectureRequest> data() {
+
 		List<PrefectureRequest> list = new ArrayList<>();
 
 		//		area
@@ -45,16 +46,19 @@ public class PrefectureTest
 
 	@Override
 	protected Prefecture api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

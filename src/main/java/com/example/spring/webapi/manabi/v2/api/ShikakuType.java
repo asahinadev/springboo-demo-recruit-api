@@ -13,12 +13,6 @@ public class ShikakuType
 		extends ApiBase<ShikakuTypeRequest, ShikakuTypeResponse> {
 
 	@Override
-	protected Class<ShikakuTypeResponse> type() {
-
-		return ShikakuTypeResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getManabi().getShikakuType();

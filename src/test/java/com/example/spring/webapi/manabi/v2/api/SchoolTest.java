@@ -27,6 +27,7 @@ public class SchoolTest
 
 	@Parameterized.Parameters
 	public static List<SchoolRequest> data() {
+
 		List<SchoolRequest> list = new ArrayList<>();
 		// list.add(SchoolRequest.of().build());
 
@@ -106,17 +107,20 @@ public class SchoolTest
 
 	@Override
 	protected School api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@SneakyThrows
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

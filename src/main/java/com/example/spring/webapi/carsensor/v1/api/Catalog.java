@@ -13,12 +13,6 @@ public class Catalog
 		extends ApiBase<CatalogRequest, CatalogResponse> {
 
 	@Override
-	protected Class<CatalogResponse> type() {
-
-		return CatalogResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getCarcensor().getCatalog();

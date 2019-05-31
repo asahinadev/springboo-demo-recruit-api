@@ -28,6 +28,7 @@ public class EventTest
 
 	@Parameterized.Parameters
 	public static List<EventRequest> data() {
+
 		List<EventRequest> list = new ArrayList<>();
 		// list.add(EventRequest.of().build());
 
@@ -120,16 +121,19 @@ public class EventTest
 
 	@Override
 	protected Event api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

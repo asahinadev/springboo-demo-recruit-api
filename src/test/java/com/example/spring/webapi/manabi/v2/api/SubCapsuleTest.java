@@ -22,6 +22,7 @@ public class SubCapsuleTest
 
 	@Parameterized.Parameters
 	public static List<SubCapsuleRequest> data() {
+
 		return Arrays.asList(
 				SubCapsuleRequest.of().subCapsules($("SB00001", "SB00002")).build(),
 				SubCapsuleRequest.of().capsules($("G020001", "G020002")).build(),
@@ -40,16 +41,19 @@ public class SubCapsuleTest
 
 	@Override
 	protected SubCapsule api() {
+
 		return api;
 	}
 
 	@Override
 	protected Logger logger() {
+
 		return log;
 	}
 
 	@Override
 	protected void setParameter() {
+
 		request = parameter;
 		request.setKey(config.getKey());
 	}

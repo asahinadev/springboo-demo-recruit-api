@@ -13,12 +13,6 @@ public class Pref
 		extends ApiBase<PrefRequest, PrefResponse> {
 
 	@Override
-	protected Class<PrefResponse> type() {
-
-		return PrefResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getCarcensor().getPrefecture();

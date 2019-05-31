@@ -13,12 +13,6 @@ public class MiddleArea
 		extends ApiBase<MiddleAreaRequest, MiddleAreaResponse> {
 
 	@Override
-	protected Class<MiddleAreaResponse> type() {
-
-		return MiddleAreaResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getHotpepper().getMiddleArea();

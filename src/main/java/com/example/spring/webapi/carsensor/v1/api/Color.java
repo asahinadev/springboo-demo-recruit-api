@@ -13,12 +13,6 @@ public class Color
 		extends ApiBase<ColorRequest, ColorResponse> {
 
 	@Override
-	protected Class<ColorResponse> type() {
-
-		return ColorResponse.class;
-	}
-
-	@Override
 	protected URI uri() {
 
 		return config.getCarcensor().getColor();
