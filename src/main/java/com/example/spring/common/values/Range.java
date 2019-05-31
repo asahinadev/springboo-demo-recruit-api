@@ -1,9 +1,7 @@
 package com.example.spring.common.values;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 import com.example.spring.util.EnumUtil;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -65,30 +63,22 @@ public enum Range {
 
 	public static List<Range> hotpepperValues() {
 
-		return Arrays.stream(values())
-				.filter(i -> i.name().startsWith("HOTPEPPER_RANGE"))
-				.collect(Collectors.toList());
+		return EnumUtil.values(values(), "HOTPEPPER_RANGE");
 	}
 
 	public static List<Range> manabiValues() {
 
-		return Arrays.stream(values())
-				.filter(i -> i.name().startsWith("MANABI_RANGE"))
-				.collect(Collectors.toList());
+		return EnumUtil.values(values(), "MANABI_RANGE");
 	}
 
 	public static List<Range> manabiJukoPriceValues() {
 
-		return Arrays.stream(values())
-				.filter(i -> i.name().startsWith("MANABI_JUKO_PRICE_RANGE"))
-				.collect(Collectors.toList());
+		return EnumUtil.values(values(), "MANABI_JUKO_PRICE_RANGE");
 	}
 
 	public static List<Range> manabiStartTimeValues() {
 
-		return Arrays.stream(values())
-				.filter(i -> i.name().startsWith("MANABI_START_TIME_RANGE"))
-				.collect(Collectors.toList());
+		return EnumUtil.values(values(), "MANABI_START_TIME_RANGE");
 	}
 
 }

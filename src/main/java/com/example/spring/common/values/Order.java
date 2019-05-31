@@ -1,9 +1,7 @@
 package com.example.spring.common.values;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 import com.example.spring.util.EnumUtil;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -86,64 +84,59 @@ public enum Order {
 		return EnumUtil.fromValue(values(), v -> Objects.equals(v.toString(), id), NONE);
 	}
 
-	public static List<Order> values(String startsWith) {
-
-		return Arrays.stream(values()).filter(i -> i.name().startsWith(startsWith)).collect(Collectors.toList());
-	}
-
 	public static List<Order> hotpepperValues() {
 
-		return values("HOTPEPER_ORDER");
+		return EnumUtil.values(values(), "HOTPEPER_ORDER");
 	}
 
 	public static List<Order> manabiValues() {
 
-		return values("MANABI_ORDER");
+		return EnumUtil.values(values(), "MANABI_ORDER");
 	}
 
 	public static List<Order> carcensorUsedValues() {
 
-		return values("CARCENSOR_USED__ORDER");
+		return EnumUtil.values(values(), "CARCENSOR_USED__ORDER");
 	}
 
 	public static List<Order> carcensorCatalogValues() {
 
-		return values("CARCENSOR_CATALOG_ORDER");
+		return EnumUtil.values(values(), "CARCENSOR_CATALOG_ORDER");
 	}
 
 	public static List<Order> aproadaireValues() {
 
-		return values("AP_ROAD_AIRE_ORDER");
+		return EnumUtil.values(values(), "AP_ROAD_AIRE_ORDER");
 	}
 
 	public static List<Order> aproadaireCityValues() {
 
-		return values("AP_ROAD_AIRE_CITY_ORDER");
+		return EnumUtil.values(values(), "AP_ROAD_AIRE_CITY_ORDER");
 	}
 
 	public static List<Order> aproadValues() {
 
-		return values("AP_ROAD_ORDER");
+		return EnumUtil.values(values(), "AP_ROAD_ORDER");
 	}
 
 	public static List<Order> aproadCountryValues() {
 
-		return values("AP_ROAD_COUNTRY_ORDER");
+		return EnumUtil.values(values(), "AP_ROAD_COUNTRY_ORDER");
 	}
 
 	public static List<Order> aproadCityValues() {
 
-		return values("AP_ROAD_CITY_ORDER");
+		return EnumUtil.values(values(), "AP_ROAD_CITY_ORDER");
 	}
 
 	public static List<Order> aproadHotelValues() {
 
-		return values("AP_ROAD_HOTEL_ORDER");
+		return EnumUtil.values(values(), "AP_ROAD_HOTEL_ORDER");
 	}
 
 	public static List<Order> aproadTallyValues() {
 
-		return values("AP_ROAD_TALLY_ORDER");
+		return EnumUtil.values(values(), "AP_ROAD_TALLY_ORDER");
 	}
 
 }
