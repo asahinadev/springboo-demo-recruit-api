@@ -20,8 +20,7 @@ public class LoggingClientHttpRequestInterceptor
 		ClientHttpResponse responce = execution.execute(request, body);
 		responce = new ClientHttpResponseWrapper(responce);
 
-		log.info("request {} {}", request.getMethod(), request.getURI());
-		log.info("body    {}", ((ClientHttpResponseWrapper) responce).getBodyText());
+		log.info("{}", ((ClientHttpResponseWrapper) responce).getBodyText());
 
 		return responce;
 	}
