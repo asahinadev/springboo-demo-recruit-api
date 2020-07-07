@@ -3,4 +3,4 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
-rootProject.name = 'recruit-api-check'
+rootProject.name = 'springboo-demo-recruit-api'

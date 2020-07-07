@@ -1,63 +1,13 @@
 server:
   port: 9002
 
+
+spring:  messages:    basename: i18n/messages 
+
+
 logging:  level:
     root: INFO
 
 recruit-api:
   key: e46b9d43c2e3544f
-  hotpepper:
-    gourmet: "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/"
-    shop: "http://webservice.recruit.co.jp/hotpepper/shop/v1/"
-    large-service-area: "http://webservice.recruit.co.jp/hotpepper/large_service_area/v1/"
-    budget: "http://webservice.recruit.co.jp/hotpepper/budget/v1/"
-    service-area: "http://webservice.recruit.co.jp/hotpepper/service_area/v1/"
-    large-area: "http://webservice.recruit.co.jp/hotpepper/large_area/v1/"
-    middle-area: "http://webservice.recruit.co.jp/hotpepper/middle_area/v1/"
-    small-area: "http://webservice.recruit.co.jp/hotpepper/small_area/v1/"
-    genre: "http://webservice.recruit.co.jp/hotpepper/genre/v1/"
-    credit-card: "http://webservice.recruit.co.jp/hotpepper/credit_card/v1/"
-    special: "http://webservice.recruit.co.jp/hotpepper/special/v1/"
-    special-category: "http://webservice.recruit.co.jp/hotpepper/special_category/v1/"
-        manabi:    school-kyoten: "http://webservice.recruit.co.jp/manabi/school_kyoten/v2"
-    event: "http://webservice.recruit.co.jp/manabi/event/v2"
-    kouza: "http://webservice.recruit.co.jp/manabi/kouza/v2"
-    tsushin: "http://webservice.recruit.co.jp/manabi/tsushin/v2"
-    tokucho: "http://webservice.recruit.co.jp/manabi/tokucho/v2"
-    area: "http://webservice.recruit.co.jp/manabi/area/v2"
-    prefecture: "http://webservice.recruit.co.jp/manabi/prefecture/v2"
-    city: "http://webservice.recruit.co.jp/manabi/city/v2"    along: "http://webservice.recruit.co.jp/manabi/along/v2"
-    station: "http://webservice.recruit.co.jp/manabi/station/v2"
-    category: "http://webservice.recruit.co.jp/manabi/category/v2"
-    capsule: "http://webservice.recruit.co.jp/manabi/capsule/v2"
-    sub-capsule: "http://webservice.recruit.co.jp/manabi/sub_capsule/v2"
-    tokushu: "http://webservice.recruit.co.jp/manabi/tokushu/v2"
-    genre: "http://webservice.recruit.co.jp/manabi/genre/v2"
-    shikaku-type: "http://webservice.recruit.co.jp/manabi/shikaku_type/v2"    capsule-type: "http://webservice.recruit.co.jp/manabi/capsule_type/v2"
-    
-  carcensor:
-    usedcar: "http://webservice.recruit.co.jp/carsensor/usedcar/v1/"    catalog: "http://webservice.recruit.co.jp/carsensor/catalog/v1/"    brand:   "http://webservice.recruit.co.jp/carsensor/brand/v1/"    country: "http://webservice.recruit.co.jp/carsensor/country/v1/"    large-area: "http://webservice.recruit.co.jp/carsensor/large_area/v1/"    prefecture: "http://webservice.recruit.co.jp/carsensor/pref/v1/"
-    color: "http://webservice.recruit.co.jp/carsensor/color/v1/"
-    body: "http://webservice.recruit.co.jp/carsensor/body/v1/"  
-  abroadair:    ticket: "http://webservice.recruit.co.jp/ab-road-air/ticket/v1/"
-    area: "http://webservice.recruit.co.jp/ab-road-air/area/v1/"
-    zone: "http://webservice.recruit.co.jp/ab-road-air/zone/v1/"
-    country: "http://webservice.recruit.co.jp/ab-road-air/country/v1/"
-    city: "http://webservice.recruit.co.jp/ab-road-air/city/v1/"
-    dept-detail: "http://webservice.recruit.co.jp/ab-road-air/dept_detail/v1/"
-    airline: "http://webservice.recruit.co.jp/ab-road-air/airline/v1/"
-    kodawari: "http://webservice.recruit.co.jp/ab-road-air/kodaw/v1/"
-    
-  abroad:
-    tour: "http://webservice.recruit.co.jp/ab-road/tour/v1/"
-    area: "http://webservice.recruit.co.jp/ab-road/area/v1/"
-    country: "http://webservice.recruit.co.jp/ab-road/country/v1/"
-    city: "http://webservice.recruit.co.jp/ab-road/city/v1/"
-    hotel: "http://webservice.recruit.co.jp/ab-road/hotel/v1/"
-    airline: "http://webservice.recruit.co.jp/ab-road/airline/v1/"
-    kodawari: "http://webservice.recruit.co.jp/ab-road/kodawari/v1/"
-    spot: "http://webservice.recruit.co.jp/ab-road/spot/v1/"
-    osusume: "http://webservice.recruit.co.jp/ab-road/osusume/v1/"
-    theme: "http://webservice.recruit.co.jp/ab-road/theme/v1/"
-    tour-tally: "http://webservice.recruit.co.jp/ab-road/tour_tally/v1/"
 
