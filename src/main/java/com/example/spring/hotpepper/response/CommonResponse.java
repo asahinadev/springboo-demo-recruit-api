@@ -1,8 +1,13 @@
 package com.example.spring.hotpepper.response;
 
+import java.util.List;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import com.example.spring.hotpepper.dto.ErrorType;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -19,11 +24,15 @@ public class CommonResponse<E extends CommonResponse.Item> {
 
 	@Getter
 	@Setter
+	@JsonIgnoreProperties(ignoreUnknown = false)
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	public static class Item {
 		String api_version;
 		Integer results_available;
 		Integer results_returned;
 		Integer results_start;
+
+		List<ErrorType> error;
 
 		@Override
 		@SneakyThrows
