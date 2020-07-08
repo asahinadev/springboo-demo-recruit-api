@@ -1,8 +1,10 @@
 package com.example.spring.hotpepper.dto;
 
-import java.util.List;
+import lombok.Data;
 
-@SuppressWarnings("preview")
-public record Special(String code, String name, List<SpecialCategory> special_category) {
-
+@Data
+public class Special {
+	String code;
+	String name;
+	SpecialCategory special_category;
 }
