@@ -3,10 +3,9 @@ package com.example.spring.carsensor.request;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -69,6 +68,6 @@ public class CommonRequest {
 	@SneakyThrows
 	@Override
 	public String toString() {
-		return new ObjectMapper().writeValueAsString(this);
+		return ToStringBuilder.reflectionToString(this);
 	}
 }
