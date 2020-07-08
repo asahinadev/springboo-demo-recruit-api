@@ -10,7 +10,7 @@ import lombok.Data;
 @Component
 @Configuration
 @ConfigurationProperties(prefix = "recruit-api")
-public class RecruitApiConfig {
+public class ApiConfig {
 
 	String key;
 
