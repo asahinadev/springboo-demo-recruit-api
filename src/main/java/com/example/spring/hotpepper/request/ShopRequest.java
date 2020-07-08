@@ -1,5 +1,7 @@
 package com.example.spring.hotpepper.request;
 
+import java.util.List;
+
 import org.springframework.util.MultiValueMap;
 
 import lombok.Getter;
@@ -10,7 +12,7 @@ import lombok.Setter;
 public class ShopRequest extends CommonRequest {
 
 	String tel;
-	String keyword;
+	List<String> keyword;
 	int start = 0;
 	int count = 0;
 
