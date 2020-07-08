@@ -14,8 +14,6 @@ HELP.md
 bin
 gradle
 .gradle
-gradlew
-gradlew.bat
 
 ### IntelliJ IDEA ###
 .idea
