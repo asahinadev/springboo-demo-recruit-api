@@ -49,6 +49,13 @@ test {
 	useJUnitPlatform()
 }
 
+compileJava {
+    options.encoding = 'UTF-8'
+}
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
 tasks.eclipse.doFirst {
 
     File buildship = file(".settings/org.eclipse.buildship.core.prefs")
