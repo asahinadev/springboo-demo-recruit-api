@@ -2,39 +2,22 @@ package com.example.spring.hotpepper.request;
 
 import java.util.List;
 
-import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
 
-import lombok.Data;
+@Getter
+@Setter
+public class SpecialRequest extends CommonRequest {
 
-@Data
-public class SpecialRequest {
-
-	@JsonProperty("special")
 	List<String> special;
-
-	@JsonProperty("special_category")
-	List<String> scategory;
+	List<String> special_category;
 
 	public MultiValueMap<String, String> queries(String apiKey) {
-
-		var map = new LinkedMultiValueMap<String, String>();
-
-		// ‹¤’Ê
-		map.set("key", apiKey);
-		map.set("format", "json");
-
-		// ŒÅ—L
-		if (special != null && !special.isEmpty()) {
-			map.set("special", String.join(",", special));
-		}
-		if (scategory != null && !scategory.isEmpty()) {
-			map.set("special_category", String.join(",", scategory));
-		}
-
-		return map;
-
+		var queries = super.queries(apiKey);
+		super.set(queries, "special", special);
+		super.set(queries, "special_category", special_category);
+		return queries;
 	}
 }
