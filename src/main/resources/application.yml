@@ -7,6 +7,7 @@ spring:  messages:    basename: i18n/messages
 
 logging:  level:
     root: INFO
+    com.example: DEBUG
 
 recruit-api:
   key: e46b9d43c2e3544f
