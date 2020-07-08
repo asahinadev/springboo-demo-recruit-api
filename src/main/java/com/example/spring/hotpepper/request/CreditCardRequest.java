@@ -1,22 +1,16 @@
 package com.example.spring.hotpepper.request;
 
-import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-public class CreditCardRequest {
+@Getter
+@Setter
+public class CreditCardRequest extends CommonRequest {
 
 	public MultiValueMap<String, String> queries(String apiKey) {
-
-		var map = new LinkedMultiValueMap<String, String>();
-
-		// ‹¤’Ê
-		map.set("key", apiKey);
-		map.set("format", "json");
-
-		return map;
-
+		var queries = super.queries(apiKey);
+		return queries;
 	}
 }
