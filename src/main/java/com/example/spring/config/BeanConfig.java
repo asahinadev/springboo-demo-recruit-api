@@ -2,8 +2,6 @@ package com.example.spring.config;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
-import java.util.OptionalLong;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -16,10 +14,8 @@ import org.springframework.http.codec.HttpMessageReader;
 import org.springframework.http.codec.HttpMessageWriter;
 import org.springframework.http.codec.json.Jackson2JsonDecoder;
 import org.springframework.stereotype.Component;
-import org.springframework.web.reactive.function.client.ClientResponse;
 import org.springframework.web.reactive.function.client.ExchangeStrategies;
 import org.springframework.web.reactive.function.client.WebClient;
-import org.springframework.web.reactive.function.client.support.ClientResponseWrapper;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -55,62 +51,37 @@ public class BeanConfig {
 	}
 
 	@Bean
-	public WebClient hotpepper(DecoderHttpMessageReader<?> jsonReader) {
+	public ExchangeStrategies jsonExchangeStrategies(DecoderHttpMessageReader<?> jsonReader) {
+		return new ExchangeStrategies() {
+			@Override
+			public List<HttpMessageReader<?>> messageReaders() {
+				return Arrays.asList(jsonReader);
+			}
+
+			@Override
+			public List<HttpMessageWriter<?>> messageWriters() {
+				return Arrays.asList(new FormHttpMessageWriter());
+			}
+		};
+	}
+
+	@Bean
+	public WebClient hotpepper(ExchangeStrategies jsonExchangeStrategies) {
 
 		return WebClient.builder()
 				.baseUrl("http://webservice.recruit.co.jp/hotpepper/")
-				.defaultHeader(
-						HttpHeaders.ACCEPT,
-						MediaType.APPLICATION_JSON_VALUE,
-						"text/javascript;charset=UTF-8"//
-				)
-				.exchangeStrategies(new ExchangeStrategies() {
-					@Override
-					public List<HttpMessageReader<?>> messageReaders() {
-						return Arrays.asList(jsonReader);
-					}
-
-					@Override
-					public List<HttpMessageWriter<?>> messageWriters() {
-						return Arrays.asList(new FormHttpMessageWriter());
-					}
-				}).build();
+				.defaultHeader(HttpHeaders.ACCEPT,
+						MediaType.APPLICATION_JSON_VALUE, "text/javascript;charset=UTF-8")
+				.exchangeStrategies(jsonExchangeStrategies).build();
 	}
 
-	static class CustomClientResponse extends ClientResponseWrapper {
+	@Bean
+	public WebClient carsensor(ExchangeStrategies jsonExchangeStrategies) {
 
-		CustomClientResponse(ClientResponse response) {
-			super(response);
-		}
-
-		class CustomHeaders implements ClientResponse.Headers {
-
-			@Override
-			public OptionalLong contentLength() {
-				return response().headers().contentLength();
-			}
-
-			@Override
-			public Optional<MediaType> contentType() {
-				return Optional.of(MediaType.APPLICATION_JSON);
-			}
-
-			@Override
-			public List<String> header(String headerName) {
-				return response().headers().header(headerName);
-			}
-
-			@Override
-			public HttpHeaders asHttpHeaders() {
-				var headers = response().headers().asHttpHeaders();
-				headers.setContentType(MediaType.APPLICATION_JSON);
-				return headers;
-			}
-
-		}
-
-		public Headers headers() {
-			return new CustomHeaders();
-		}
+		return WebClient.builder()
+				.baseUrl("http://webservice.recruit.co.jp/carsensor/")
+				.defaultHeader(HttpHeaders.ACCEPT,
+						MediaType.APPLICATION_JSON_VALUE, "text/javascript;charset=UTF-8")
+				.exchangeStrategies(jsonExchangeStrategies).build();
 	}
 }
