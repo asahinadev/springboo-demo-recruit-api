@@ -60,6 +60,12 @@ public class CommonRequest {
 		}
 	}
 
+	protected void set(MultiValueMap<String, String> queries, String key, double values) {
+		if (values != Double.NEGATIVE_INFINITY) {
+			queries.set(key, Double.toString(values));
+		}
+	}
+
 	@SneakyThrows
 	@Override
 	public String toString() {

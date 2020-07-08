@@ -9,4 +9,5 @@ import lombok.Data;
 public class Budget {
 	String name;
 	String code;
+	String average;
 }
