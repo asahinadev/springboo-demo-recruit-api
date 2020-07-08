@@ -54,6 +54,12 @@ public class CommonRequest {
 		}
 	}
 
+	protected void set(MultiValueMap<String, String> queries, String key, int values) {
+		if (values > 0) {
+			queries.set(key, Integer.toString(values));
+		}
+	}
+
 	@SneakyThrows
 	@Override
 	public String toString() {
