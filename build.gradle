@@ -9,8 +9,8 @@ plugins {
 group = 'com.example.spring'
 version = '0.0.1'
 
-sourceCompatibility = 14
-targetCompatibility = 14
+sourceCompatibility = 11
+targetCompatibility = 11
 
 configurations {
 	annotationProcessor
@@ -60,12 +60,6 @@ compileTestJava {
 
 javadoc {
     options.encoding = 'UTF-8'
-}
-
-configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
 }
 
 eclipse {
